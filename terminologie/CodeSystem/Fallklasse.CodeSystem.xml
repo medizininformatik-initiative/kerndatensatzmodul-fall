@@ -1,0 +1,49 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fallklasse" />
+    <version value="0.9" />
+    <name value="Fallklasse" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-01-21" />
+    <publisher value="Medizininformatik Initative" />
+    <description value="Fallklasse eines Falls" />
+    <caseSensitive value="true" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fallklasse" />
+    <content value="complete" />
+    <concept>
+        <code value="stationaer" />
+        <display value="Stationär" />
+    </concept>
+    <concept>
+        <code value="ambulant" />
+        <display value="Amnbulant" />
+    </concept>
+    <concept>
+        <code value="teilstationaer" />
+        <display value="Teilstationär" />
+    </concept>
+    <concept>
+        <code value="station" />
+        <display value="Station" />
+    </concept>
+    <concept>
+        <code value="op" />
+        <display value="Operation" />
+    </concept>
+    <concept>
+        <code value="ub" />
+        <display value="Untersuchung und Behandlung" />
+    </concept>
+    <concept>
+        <code value="konsil" />
+        <display value="Konsil" />
+    </concept>
+    <concept>
+        <code value="vorstationaer" />
+        <display value="Vorstationär" />
+    </concept>
+    <concept>
+        <code value="nachstationaer" />
+        <display value="Nachstationär" />
+    </concept>
+</CodeSystem>
