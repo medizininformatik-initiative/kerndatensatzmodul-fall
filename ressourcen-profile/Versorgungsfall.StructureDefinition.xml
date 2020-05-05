@@ -36,7 +36,7 @@
         <key value="mii-enc-vf-1" />
         <severity value="error" />
         <human value="Das Ende des Versorgungsfalls muss angegeben werden sollte dieser abgeschlossen werden" />
-        <expression value="status = finished implies period.end.exists()" />
+        <expression value="status = 'finished' implies period.end.exists()" />
       </constraint>
     </element>
     <element id="Encounter.id">
