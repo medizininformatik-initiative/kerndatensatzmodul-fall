@@ -30,6 +30,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
   <derivation value="constraint" />
   <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <constraint>
+        <key value="mii-enc-vf-1" />
+        <severity value="error" />
+        <human value="Das Ende des Versorgungsfalls muss angegeben werden sollte dieser abgeschlossen werden" />
+        <expression value="status = finished implies period.end.exists()" />
+      </constraint>
+    </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
       <mustSupport value="true" />
@@ -221,6 +230,38 @@
         <strength value="required" />
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fallklasse" />
       </binding>
+    </element>
+    <element id="Encounter.period">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Encounter.period" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.start">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Encounter.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Encounter.period.end" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
