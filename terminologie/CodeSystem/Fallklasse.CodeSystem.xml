@@ -13,6 +13,18 @@
     <concept>
         <code value="stationaer" />
         <display value="Stationär" />
+        <concept>
+            <code value="vorstationaer" />
+            <display value="Vorstationär" />
+        </concept>
+        <concept>
+            <code value="vollstationaer" />
+            <display value="Vollstationär" />
+        </concept>
+        <concept>
+            <code value="nachstationaer" />
+            <display value="Nachstationär" />
+        </concept>
     </concept>
     <concept>
         <code value="ambulant" />
@@ -21,29 +33,5 @@
     <concept>
         <code value="teilstationaer" />
         <display value="Teilstationär" />
-    </concept>
-    <concept>
-        <code value="station" />
-        <display value="Station" />
-    </concept>
-    <concept>
-        <code value="op" />
-        <display value="Operation" />
-    </concept>
-    <concept>
-        <code value="ub" />
-        <display value="Untersuchung und Behandlung" />
-    </concept>
-    <concept>
-        <code value="konsil" />
-        <display value="Konsil" />
-    </concept>
-    <concept>
-        <code value="vorstationaer" />
-        <display value="Vorstationär" />
-    </concept>
-    <concept>
-        <code value="nachstationaer" />
-        <display value="Nachstationär" />
     </concept>
 </CodeSystem>
