@@ -30,58 +30,110 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
   <derivation value="constraint" />
   <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <constraint>
+        <key value="mii-enc-af-1" />
+        <severity value="error" />
+        <human value="Das Ende des Abteilungsfalls muss angegeben werden sollte dieser abgeschlossen werden" />
+        <expression value="status = 'finished' implies period.end.exists()" />
+      </constraint>
+    </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.meta" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.meta.source">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.meta.source" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.meta.profile">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.meta.profile" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.status" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.class" />
+      <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EncounterClass" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse" />
+      </binding>
+    </element>
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding">
+      <path value="Encounter.serviceType.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fab">
+      <path value="Encounter.serviceType.coding" />
+      <sliceName value="fab" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fachabteilungsschluessel" />
+      </binding>
+    </element>
+    <element id="Encounter.serviceType.coding:fab.system">
+      <path value="Encounter.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fab.code">
+      <path value="Encounter.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location">
+      <path value="Encounter.location" />
       <mustSupport value="true" />
     </element>
   </differential>
