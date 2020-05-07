@@ -193,7 +193,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -210,7 +210,7 @@
     <element id="Encounter.diagnosis.use.coding:aufnahmeDiagnose.system">
       <path value="Encounter.diagnosis.use.coding.system" />
       <min value="1" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/diagnosis-role" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/diagnosis-role" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.use.coding:aufnahmeDiagnose.code">
