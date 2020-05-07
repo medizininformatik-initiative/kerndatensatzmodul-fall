@@ -141,6 +141,16 @@
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fallklasse" />
       </binding>
     </element>
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
       <min value="1" />
@@ -207,6 +217,38 @@
       <path value="Encounter.diagnosis.use.coding.code" />
       <min value="1" />
       <fixedCode value="AD" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.location">
+      <path value="Encounter.location.location" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+      </type>
+    </element>
+    <element id="Encounter.location.status">
+      <path value="Encounter.location.status" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period">
+      <path value="Encounter.location.period" />
+      <min value="1" />
+      <constraint>
+        <key value="mii-enc-vf-2" />
+        <severity value="error" />
+        <human value="Falls die Bewegung der PatientIn für diesen Versorgungsort angeschlossen ist muss ein Enddatum bekannt sein" />
+        <expression value="location.status = 'completed' implies location.period.end.exists()" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period.start">
+      <path value="Encounter.location.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period.end">
+      <path value="Encounter.location.period.end" />
       <mustSupport value="true" />
     </element>
   </differential>
