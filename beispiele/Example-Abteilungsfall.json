@@ -23,7 +23,7 @@
             {
                 "code": "0100",
                 "display": "Fachabteilung für Innere Medizin",
-                "system": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fachabteilungsschluessel"
+                "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel"
             }
         ]
     },
