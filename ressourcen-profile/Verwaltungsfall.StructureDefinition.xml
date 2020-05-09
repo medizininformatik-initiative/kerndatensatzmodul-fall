@@ -74,6 +74,27 @@
       <path value="Encounter.status" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EncounterClass" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse" />
+      </binding>
+    </element>
+    <element id="Encounter.class.system">
+      <min value="1" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+      <fixedCode value="stationaer" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.serviceType">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
