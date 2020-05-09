@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Abteilungsfallklasse",
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse",
+  "title": "Abteilungsfallklasse",
+  "name": "Abteilungsfallklasse",
+  "count": 4,
+  "version": "0.9",
+  "status": "draft",
+  "description": "Art des Abteilungsfall, z.B. Aufenthalt auf Station, Operation etc.",
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "operation",
+      "display": "Operation"
+    },
+    {
+      "display": "Konsil",
+      "code": "konsil"
+    },
+    {
+      "display": "Untersuchung und Behandlung",
+      "code": "ub"
+    },
+    {
+      "code": "station",
+      "display": "Stationäre Behandlung"
+    }
+  ]
+}
