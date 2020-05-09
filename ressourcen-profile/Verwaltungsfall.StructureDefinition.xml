@@ -483,14 +483,6 @@
     </element>
     <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding">
       <path value="Encounter.hospitalization.extension.value[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding:entlassungsgrund">
@@ -498,6 +490,7 @@
       <sliceName value="entlassungsgrund" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding:entlassungsgrund.system">
       <path value="Encounter.hospitalization.extension.value[x].coding.system" />
       <mustSupport value="true" />
     </element>
