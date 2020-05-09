@@ -135,6 +135,33 @@
     </element>
     <element id="Encounter.location">
       <path value="Encounter.location" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.location">
+      <path value="Encounter.location.location" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.status">
+      <path value="Encounter.location.status" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period">
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period.start">
+      <path value="Encounter.location.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location.period.end">
+      <path value="Encounter.location.period.end" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.partOf">
