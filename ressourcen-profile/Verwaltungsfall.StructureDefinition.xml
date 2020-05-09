@@ -332,6 +332,12 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Diagnosis" />
       </extension>
@@ -340,6 +346,12 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.condition">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.condition" />
       <type>
         <code value="Reference" />
@@ -348,11 +360,23 @@
       </type>
     </element>
     <element id="Encounter.diagnosis.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.use" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.use.coding">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.use.coding" />
       <slicing>
         <discriminator>
@@ -365,6 +389,12 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.use.coding:billing">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.use.coding" />
       <sliceName value="billing" />
       <min value="1" />
@@ -372,18 +402,36 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.use.coding:billing.system">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.use.coding.system" />
       <min value="1" />
       <patternUri value="http://terminology.hl7.org/CodeSystem/diagnosis-role" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis.use.coding:billing.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.diagnosis.use.coding.code" />
       <min value="1" />
       <fixedCode value="billing" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.account">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.account" />
       <min value="1" />
       <max value="1" />
@@ -394,8 +442,63 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Encounter.hospitalization" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.extension">
+      <path value="Encounter.hospitalization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund">
+      <path value="Encounter.hospitalization.extension" />
+      <sliceName value="entlassungsgrund" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Account/Abrechnungsfall" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x]">
+      <path value="Encounter.hospitalization.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding">
+      <path value="Encounter.hospitalization.extension.value[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding:entlassungsgrund">
+      <path value="Encounter.hospitalization.extension.value[x].coding" />
+      <sliceName value="entlassungsgrund" />
+      <mustSupport value="true" />
+    </element>
+      <path value="Encounter.hospitalization.extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.extension:entlassungsgrund.value[x].coding:entlassungsgrund.code">
+      <path value="Encounter.hospitalization.extension.value[x].coding.code" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.destination">
