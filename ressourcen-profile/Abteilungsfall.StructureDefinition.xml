@@ -39,6 +39,12 @@
         <expression value="status = 'finished' implies period.end.exists()" />
         <source value="Encounter" />
       </constraint>
+      <constraint>
+        <key value="mii-enc-af-2" />
+        <severity value="error" />
+        <human value="Das Ende der Verlegung muss bekannt sein, sollte die Bewegung innerhalb des Versorgungsfalls abgeschlossen sein" />
+        <expression value="location.status = 'completed' implies location.period.end.exists()" />
+      </constraint>
     </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
