@@ -91,7 +91,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
