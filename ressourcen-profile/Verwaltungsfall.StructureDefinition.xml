@@ -281,6 +281,7 @@
       <sliceName value="aufnahmegrund" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.reasonCode:aufnahmegrund.coding">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
@@ -290,10 +291,24 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Encounter.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.reasonCode:aufnahmegrund.coding.system">
+    <element id="Encounter.reasonCode:aufnahmegrund.coding:aufnahmegrund">
+      <path value="Encounter.reasonCode.coding" />
+      <sliceName value="aufnahmegrund" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode:aufnahmegrund.coding:aufnahmegrund.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -302,9 +317,10 @@
       </extension>
       <path value="Encounter.reasonCode.coding.system" />
       <min value="1" />
+      <patternUri value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Aufnahmegrund" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.reasonCode:aufnahmegrund.coding.code">
+    <element id="Encounter.reasonCode:aufnahmegrund.coding:aufnahmegrund.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -316,6 +332,9 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
       <path value="Encounter.diagnosis" />
       <min value="1" />
       <mustSupport value="true" />
