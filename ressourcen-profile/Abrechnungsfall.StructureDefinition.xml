@@ -183,6 +183,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Encounter.serviceType" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.serviceType.coding">
