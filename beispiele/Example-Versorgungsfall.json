@@ -9,7 +9,7 @@
     "class": {
         "code": "stationaer",
         "display": "Stationär",
-        "system": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Fallklasse"
+        "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fallklasse"
     },
     "diagnosis": [
         {

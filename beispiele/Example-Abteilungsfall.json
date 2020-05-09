@@ -9,7 +9,7 @@
     "class": {
         "code": "ub",
         "display": "Untersuchung und Behandlung",
-        "system": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse"
+        "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Abteilungsfallklasse"
     },
     "period": {
         "end": "2020-03-13T12:00:00+01:00",
