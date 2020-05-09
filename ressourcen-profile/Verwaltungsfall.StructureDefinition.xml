@@ -138,6 +138,15 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
     <element id="Encounter.period">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
@@ -146,8 +155,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Encounter.period" />
-      <min value="1" />
-      <mustSupport value="true" />
+      <max value="0" />
+      <mustSupport value="false" />
     </element>
     <element id="Encounter.reasonCode">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
@@ -281,6 +290,65 @@
       </extension>
       <path value="Encounter.reasonCode.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition">
+      <path value="Encounter.diagnosis.condition" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+      </type>
+    </element>
+    <element id="Encounter.diagnosis.use">
+      <path value="Encounter.diagnosis.use" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding">
+      <path value="Encounter.diagnosis.use.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:billing">
+      <path value="Encounter.diagnosis.use.coding" />
+      <sliceName value="billing" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:billing.system">
+      <path value="Encounter.diagnosis.use.coding.system" />
+      <min value="1" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/diagnosis-role" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:billing.code">
+      <path value="Encounter.diagnosis.use.coding.code" />
+      <min value="1" />
+      <fixedCode value="billing" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.account">
+      <path value="Encounter.account" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Account/Abrechnungsfall" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization">
