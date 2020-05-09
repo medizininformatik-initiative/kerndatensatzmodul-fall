@@ -44,6 +44,7 @@
         <severity value="error" />
         <human value="Das Ende der Verlegung muss bekannt sein, sollte die Bewegung innerhalb des Versorgungsfalls abgeschlossen sein" />
         <expression value="location.status = 'completed' implies location.period.end.exists()" />
+        <source value="Encounter" />
       </constraint>
     </element>
     <element id="Encounter.id">
@@ -157,7 +158,6 @@
     <element id="Encounter.location.location">
       <path value="Encounter.location.location" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
