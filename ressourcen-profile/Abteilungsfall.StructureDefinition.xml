@@ -118,6 +118,7 @@
     <element id="Encounter.serviceType.coding:fab.system">
       <path value="Encounter.serviceType.coding.system" />
       <min value="1" />
+      <patternUri value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.serviceType.coding:fab.code">
