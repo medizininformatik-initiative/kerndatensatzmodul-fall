@@ -152,6 +152,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.location.period">
+      <path value="Encounter.location.period" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
