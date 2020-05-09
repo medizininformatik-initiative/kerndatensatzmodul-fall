@@ -307,6 +307,10 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Aufnahmegrund" />
+      </binding>
     </element>
     <element id="Encounter.reasonCode:aufnahmegrund.coding:aufnahmegrund.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
