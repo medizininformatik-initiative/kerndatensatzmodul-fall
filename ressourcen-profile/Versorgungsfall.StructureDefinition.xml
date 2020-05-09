@@ -266,6 +266,7 @@
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.period">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
