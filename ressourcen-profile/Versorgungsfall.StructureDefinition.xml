@@ -37,6 +37,7 @@
         <severity value="error" />
         <human value="Das Ende des Versorgungsfalls muss angegeben werden sollte dieser abgeschlossen werden" />
         <expression value="status = 'finished' implies period.end.exists()" />
+        <source value="Encounter" />
       </constraint>
     </element>
     <element id="Encounter.id">
@@ -125,7 +126,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -154,7 +155,7 @@
       </extension>
       <path value="Encounter.identifier.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier:versorgungsfallNr.type.coding:vn.code">
@@ -166,7 +167,7 @@
       </extension>
       <path value="Encounter.identifier.type.coding.code" />
       <min value="1" />
-      <patternCode value="VN" />
+      <fixedCode value="VN" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier:versorgungsfallNr.system">
@@ -429,6 +430,7 @@
         <severity value="error" />
         <human value="Falls die Bewegung der PatientIn für diesen Versorgungsort angeschlossen ist muss ein Enddatum bekannt sein" />
         <expression value="location.status = 'completed' implies location.period.end.exists()" />
+        <source value="Encounter" />
       </constraint>
       <mustSupport value="true" />
     </element>
