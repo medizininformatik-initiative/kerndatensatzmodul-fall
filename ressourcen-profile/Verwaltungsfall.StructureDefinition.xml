@@ -64,107 +64,6 @@
       <path value="Encounter.meta.profile" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="type.coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier" />
-      <sliceName value="abrechnungsfallNr" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier.type" />
-      <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-          <code value="VN" />
-        </coding>
-      </patternCodeableConcept>
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr.type.coding:vn">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier.type.coding" />
-      <sliceName value="vn" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr.type.coding:vn.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier.type.coding.system" />
-      <min value="1" />
-      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier:abrechnungsfallNr.type.coding:vn.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Encounter.identifier.type.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Encounter.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
@@ -382,6 +281,26 @@
       </extension>
       <path value="Encounter.reasonCode.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.destination">
+      <path value="Encounter.hospitalization.destination" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.partOf">
+      <path value="Encounter.partOf" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/Verwaltungsfall" />
+      </type>
       <mustSupport value="true" />
     </element>
   </differential>
