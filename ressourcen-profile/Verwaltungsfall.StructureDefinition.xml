@@ -473,7 +473,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Account/Abrechnungsfall" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Account/Entlassungsgrund" />
       </type>
       <mustSupport value="true" />
     </element>
