@@ -119,6 +119,15 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
       <min value="1" />
