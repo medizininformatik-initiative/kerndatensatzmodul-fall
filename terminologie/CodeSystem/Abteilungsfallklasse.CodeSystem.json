@@ -13,19 +13,23 @@
   "concept": [
     {
       "code": "operation",
-      "display": "Operation"
+      "display": "Operation",
+      "definition": "Aufenthalt in OP-Bereichen zur Durchführung von operativen Eingriffen inklusive Vor- und Nachbereitung"
     },
     {
       "display": "Konsil",
-      "code": "konsil"
+      "code": "konsil",
+      "definition": "Arztkontakte im Rahmen z.B. von Aufklärungsgesprächen, Visiten etc."
     },
     {
       "display": "Untersuchung und Behandlung",
-      "code": "ub"
+      "code": "ub",
+      "definition": "Aufenthalt auf einer Funktionsabteilung zur Durchführung spezieller diagnostischer/therapeutischer Maßnahmen"
     },
     {
       "code": "station",
-      "display": "Stationäre Behandlung"
+      "display": "Stationäre Behandlung",
+      "definition": "Stationärer Aufenthalt in einem Krankenhausbett auf einem Zimmer einer Krankenhausstation"
     }
   ]
 }
