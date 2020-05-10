@@ -4,7 +4,7 @@
   <version value="0.9" />
   <name value="Fall" />
   <status value="draft" />
-  <description value="Logische Repräsentation des Basismoduls Diagnose" />
+  <description value="Logische Repräsentation des Basismoduls Fall" />
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="false" />
