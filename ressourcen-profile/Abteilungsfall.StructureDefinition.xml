@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/Abteilungsfall" />
+  <version value="0.9" />
   <name value="Abteilungsfall" />
   <status value="draft" />
+  <description value="Dieses Profil beschreibt einen Abteilungsfall in der Medizininformatik-Initiative." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
