@@ -3,7 +3,8 @@
     "status": "finished",
     "class":{
         "system": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse",
-        "value": "stationaer"
+        "code": "stationaer",
+        "display": "Stationär"
     },
     "serviceType": {
         "coding": [
