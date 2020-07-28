@@ -2,14 +2,14 @@
     "resourceType": "Encounter",
     "meta": {
         "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/Abteilungsfall"
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Abteilungsfall"
         ]
     },
     "status": "finished",
     "class": {
         "code": "ub",
         "display": "Untersuchung und Behandlung",
-        "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Abteilungsfallklasse"
+        "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Abteilungsfallklasse"
     },
     "period": {
         "end": "2020-03-13T12:00:00+01:00",
@@ -23,7 +23,7 @@
             {
                 "code": "0100",
                 "display": "Fachabteilung für Innere Medizin",
-                "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel"
+                "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel"
             }
         ]
     },

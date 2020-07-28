@@ -2,14 +2,14 @@
     "resourceType": "Encounter",
     "meta": {
         "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/Versorgungsfall"
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Encounter/Versorgungsfall"
         ]
     },
     "status": "finished",
     "class": {
         "code": "stationaer",
         "display": "Stationär",
-        "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Versorgungsfallklasse"
+        "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Versorgungsfallklasse"
     },
     "diagnosis": [
         {

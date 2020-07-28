@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Abteilungsfallklasse",
-  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Abteilungsfallklasse",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Abteilungsfallklasse",
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-fall/core/ValueSet/Abteilungsfallklasse",
   "title": "Abteilungsfallklasse",
   "name": "Abteilungsfallklasse",
   "count": 4,

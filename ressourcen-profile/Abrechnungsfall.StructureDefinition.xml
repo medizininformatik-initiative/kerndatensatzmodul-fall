@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Account/Abrechnungsfall" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Account/Abrechnungsfall" />
   <version value="0.9" />
   <name value="Abrechnungsfall" />
   <status value="draft" />
@@ -27,42 +27,18 @@
       <mustSupport value="true" />
     </element>
     <element id="Account.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.meta" />
       <mustSupport value="true" />
     </element>
     <element id="Account.meta.source">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.meta.source" />
       <mustSupport value="true" />
     </element>
     <element id="Account.meta.profile">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.meta.profile" />
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier" />
       <slicing>
         <discriminator>
@@ -75,12 +51,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier" />
       <sliceName value="versorgungsfallNr" />
       <min value="1" />
@@ -88,23 +58,11 @@
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.type" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.type.coding" />
       <slicing>
         <discriminator>
@@ -117,12 +75,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.type.coding:vn">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.type.coding" />
       <sliceName value="vn" />
       <min value="1" />
@@ -134,106 +86,51 @@
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.type.coding:vn.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.type.coding.system" />
       <min value="1" />
       <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.type.coding:vn.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.type.coding.code" />
       <min value="1" />
       <fixedCode value="VN" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Account.identifier:versorgungsfallNr.value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.identifier.value" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Account.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.status" />
       <mustSupport value="true" />
     </element>
     <element id="Account.subject">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.subject" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
-        <targetProfile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Patient" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Account.servicePeriod">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.servicePeriod" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Account.servicePeriod.start">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.servicePeriod.start" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Account.servicePeriod.end">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Account.servicePeriod.end" />
       <mustSupport value="true" />
     </element>

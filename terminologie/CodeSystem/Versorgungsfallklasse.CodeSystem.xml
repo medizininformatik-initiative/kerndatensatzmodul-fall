@@ -1,5 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <url value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Versorgungsfallklasse" />
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Versorgungsfallklasse" />
     <version value="0.9" />
     <name value="Versorgungsfallklasse" />
     <status value="draft" />
@@ -8,7 +8,7 @@
     <publisher value="Medizininformatik Initative" />
     <description value="Fallklasse eines Versorgungsfalls" />
     <caseSensitive value="true" />
-    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Versorgungsfallklasse" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Versorgungsfallklasse" />
     <content value="complete" />
     <concept>
         <code value="stationaer" />

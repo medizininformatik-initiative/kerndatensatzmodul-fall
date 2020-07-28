@@ -5,8 +5,8 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Entlassungsgrund",
-  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Entlassungsgrund",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund",
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-fall/core/ValueSet/Entlassungsgrund",
   "experimental": false,
   "date": "2020-05-09",
   "publisher": "Medizininformatik Initiative",

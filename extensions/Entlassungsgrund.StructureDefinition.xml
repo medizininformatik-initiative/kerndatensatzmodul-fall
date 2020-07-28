@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Entlassungsgrund" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Entlassungsgrund" />
   <version value="0.9" />
   <name value="Entlassungsgrund" />
   <status value="draft" />
@@ -23,7 +23,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Entlassungsgrund" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/Entlassungsgrund" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -50,13 +50,13 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Entlassungsgrund" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Entlassungsgrund" />
       </binding>
     </element>
     <element id="Extension.value[x].coding:entlassungsgrund.system">
       <path value="Extension.value[x].coding.system" />
       <min value="1" />
-      <patternUri value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Entlassungsgrund" />
+      <patternUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
     </element>
     <element id="Extension.value[x].coding:entlassungsgrund.code">
       <path value="Extension.value[x].coding.code" />

@@ -6,7 +6,7 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Fachabteilungsschluessel",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel",
   "version": "0.9",
   "status": "draft",
   "description": "Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung",

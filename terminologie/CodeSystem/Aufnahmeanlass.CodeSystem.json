@@ -6,8 +6,8 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/Aufnahmeanlass",
-  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Aufnahmeanlass",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Aufnahmeanlass",
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Aufnahmeanlass",
   "date": "2020-05-09",
   "publisher": "Medizininformatik Initative",
   "experimental": false,
