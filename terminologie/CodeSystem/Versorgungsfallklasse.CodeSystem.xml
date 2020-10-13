@@ -1,0 +1,61 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fallklasse" />
+    <version value="0.9" />
+    <name value="Fallklasse" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-01-21" />
+    <publisher value="Medizininformatik Initative" />
+    <description value="Fallklasse eines Kontaktes" />
+    <caseSensitive value="true" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Fallklasse" />
+    <hierarchyMeaning value="is-a" />
+    <content value="complete" />
+    <concept>
+        <code value="stationaer" />
+        <display value="Stationär" />
+        <definition value="Stationärer Aufenthalt in einem Krankenhausbett auf einem Zimmer einer Krankenhausstation" />
+        <concept>
+            <code value="vorstationaer" />
+            <display value="Vorstationär" />
+        </concept>
+        <concept>
+            <code value="vollstationaer" />
+            <display value="Vollstationär" />
+            <definition value="Der Aufenthalt innerhalb einer Einrichtung welcher beginnt mit einer stationären Aufnahme zum Aufnahmezeitpunkt und endet mit einer stationären Entlassung zum Entlassungszeitpunkt" />
+        </concept>
+        <concept>
+            <code value="intensivstationaer" />
+            <display value="Intensivstationär" />
+            <definition value="Intensivstationäre Kontakte sind Kontakte mit einer Station, die zur intensivmedizinischen Behandlung im Krankenhausplan bzw. Förderungsbescheid zugelassen sind" />
+        </concept>
+        <concept>
+            <code value="nachstationaer" />
+            <display value="Nachstationär" />
+        </concept>
+    </concept>
+    <concept>
+        <code value="ambulant" />
+        <display value="Ambulant" />
+    </concept>
+    <concept>
+        <code value="teilstationaer" />
+        <display value="Teilstationär" />
+        <definition value="Ein teilstationärer Kontakt beansprucht ebenfalls die medizinisch-organisatorische Infrastruktur eines Krankenhauses, beschränkt sich aber meist auf die Unterbringung der Patienten in Tages- und Nachtkliniken." />
+    </concept>
+    <concept>
+        <code value="operation" />
+        <display value="Operation" />
+        <definition value="Aufenthalt in OP-Bereichen zur Durchführung von operativen Eingriffen inklusive Vor- und Nachbereitung" />
+    </concept>
+    <concept>
+        <code value="konsil" />
+        <display value="Konsil" />
+        <definition value="Arztkontakte im Rahmen z.B. von Aufklärungsgesprächen, Visiten etc." />
+    </concept>
+    <concept>
+        <code value="ub" />
+        <display value="Untersuchung und Behandlung" />
+        <definition value="Aufenthalt auf einer Funktionsabteilung zur Durchführung spezieller diagnostischer/therapeutischer Maßnahmen" />
+    </concept>
+</CodeSystem>
