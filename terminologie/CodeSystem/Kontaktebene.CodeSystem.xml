@@ -33,6 +33,10 @@
         </concept>
     </concept>
     <concept>
+        <code value="stationsäquivalent" />
+        <display value="stationsäquivalent" />
+    </concept>
+    <concept>
         <code value="ambulant" />
         <display value="Ambulant" />
     </concept>
