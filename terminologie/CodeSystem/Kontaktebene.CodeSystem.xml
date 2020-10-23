@@ -35,6 +35,7 @@
     <concept>
         <code value="stationsäquivalent" />
         <display value="stationsäquivalent" />
+        <definition value="Psychiatrische Krankenhäuser mit regionaler Versorgungsverpflichtung sowie Allgemeinkrankenhäuser mit selbständigen, fachärztlich geleiteten psychiatrischen Abteilungen mit regionaler Versorgungsverpflichtung können in medizinisch geeigneten Fällen, wenn eine Indikation für eine stationäre psychiatrische Behandlung vorliegt, anstelle einer vollstationären Behandlung eine stationsäquivalente psychiatrische Behandlung im häuslichen Umfeld erbringen" />
     </concept>
     <concept>
         <code value="ambulant" />
@@ -43,6 +44,7 @@
     <concept>
         <code value="teilstationaer" />
         <display value="Teilstationär" />
+        <definition value="Eine teilstationäre Behandlung unterscheidet sich im Wesentlichen von einer vollstationären Behandlung durch eine regelmäßige, aber nicht zeitlich durchgehende Anwesenheit der Patientin oder des Patienten im Krankenhaus. Im Rahmen der teilstationären Behandlung kann Unterkunft und Verpflegung gewährt werden." />
     </concept>
     <concept>
         <code value="operation" />
