@@ -40,6 +40,7 @@
     <concept>
         <code value="ambulant" />
         <display value="Ambulant" />
+        <definition value="Umfasst ambulante Operationen nach § 115b SGB V und eine ambulante spezialfachärztliche Versorgung nach § 116b SGB V" />
     </concept>
     <concept>
         <code value="teilstationaer" />
