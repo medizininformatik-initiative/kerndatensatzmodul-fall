@@ -34,4 +34,12 @@
             <value value="stationär" />
         </designation>
     </concept>
+    <concept>
+        <code value="PRENC" />
+        <display value="pre-admission" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Voraufnahme" />
+        </designation>
+    </concept>
 </CodeSystem>
