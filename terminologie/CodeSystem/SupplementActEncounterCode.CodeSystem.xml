@@ -1,12 +1,12 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/SupplementActEncounterCode" />
     <version value="1.0" />
-    <name value="SupplementActEncounterCode" />
+    <name value="Medizininformatik Initative -  CodeSystem - SupplementActEncounterCode" />
+    <title value="SupplementActEncounterCode" />
     <status value="active" />
     <experimental value="false" />
     <publisher value="Medizininformatik Initative" />
     <description value="Supplement für ActEncounterCode" />
-    <caseSensitive value="true" />
     <supplements value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
     <content value="supplement" />
     <concept>

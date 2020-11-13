@@ -30,6 +30,30 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
   <derivation value="constraint" />
   <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <constraint>
+        <key value="mii-enc-1" />
+        <severity value="error" />
+        <human value="Falls der Encounter abgeschlossen wurde muss ein Enddatum bekannt sein" />
+        <expression value="status = 'finished' implies period.end.exists()" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung" />
+      </constraint>
+      <constraint>
+        <key value="mii-enc-2" />
+        <severity value="error" />
+        <human value="Falls der Encounter abgeschlossen wurde muss eine Diagnose bekannt sein" />
+        <expression value="status = 'finished' implies diagnosis.exists()" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung" />
+      </constraint>
+      <constraint>
+        <key value="mii-enc-3" />
+        <severity value="error" />
+        <human value="Falls ein Einrichtungskontakt abgebildet wird muss ein Aufnahmegrund vorliegen" />
+        <expression value="type.coding.where(system = 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Kontaktebene' and code = 'einrichtungsebene').exists() implies hospitalization.admitSource.exists()" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung" />
+      </constraint>
+    </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
       <mustSupport value="true" />
@@ -48,6 +72,147 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
+      <short value="planned | | in-progress | onleave | finished | cancelled +" />
+      <definition value="planned | | in-progress | onleave | finished | cancelled +" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/RestrictedEncounterStatus" />
+      </binding>
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition">
+      <path value="Encounter.diagnosis.condition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use">
+      <path value="Encounter.diagnosis.use" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.rank">
+      <path value="Encounter.diagnosis.rank" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding">
+      <path value="Encounter.hospitalization.admitSource.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass">
+      <path value="Encounter.hospitalization.admitSource.coding" />
+      <sliceName value="aufnahmeanlass" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Aufnahmeanlass" />
+      </patternCoding>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Aufnahmeanlass" />
+      </binding>
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass.system">
+      <path value="Encounter.hospitalization.admitSource.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Aufnahmeanlass" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass.code">
+      <path value="Encounter.hospitalization.admitSource.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <sliceName value="entlassungsgrund" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Entlassungsgrund" />
+      </binding>
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund.system">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund.code">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.partOf">
+      <path value="Encounter.partOf" />
       <mustSupport value="true" />
     </element>
   </differential>

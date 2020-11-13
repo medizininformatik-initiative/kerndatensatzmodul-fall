@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "title": "Medizininformatik-Initiative - CodeSystem - EncounterClassAdditionsDE",
+  "name": "EncounterClassAdditionsDE",
+  "experimental": false,
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/EncounterClassAdditionsDE",
+  "version": "1.0",
+  "status": "active",
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "begleitperson",
+      "display": "Begleitperson"
+    },
+    {
+      "code": "vorstationaer",
+      "display": "Vorstationär"
+    },
+    {
+      "code": "nachstationaer",
+      "display": "Nachstationär"
+    },
+    {
+      "display": "Teilstationäre Behandlung",
+      "code": "teilstationaer"
+    },
+    {
+      "code": "normalstationaer",
+      "display": "Normalstationär"
+    },
+    {
+      "code": "intensivstationaer",
+      "display": "Intensivstationär"
+    },
+    {
+      "code": "tagesklinik",
+      "display": "Tagesklinische Behandlung"
+    }
+  ]
+}
