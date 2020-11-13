@@ -7,10 +7,10 @@
     ]
   },
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel",
-  "version": "0.9",
-  "status": "draft",
+  "version": "1.0",
+  "status": "active",
   "description": "Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung",
-  "content": "complete",
+  "content": "fragment",
   "concept": [
     {
       "code": "0100",

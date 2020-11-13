@@ -183,6 +183,44 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding">
+      <path value="Encounter.serviceType.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel">
+      <path value="Encounter.serviceType.coding" />
+      <sliceName value="fachabteilungsschluessel" />
+      <max value="1" />
+      <patternCoding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel" />
+      </binding>
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.system">
+      <path value="Encounter.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.code">
+      <path value="Encounter.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
       <min value="1" />
@@ -272,7 +310,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="system" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -311,7 +349,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="system" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
