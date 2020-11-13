@@ -171,7 +171,16 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/dateTime" />
       </type>
     </element>
-        <element id="Fall.Versorgungsstellenkontakt">
+    <element id="Fall.Abteilungskontakt.Fachabteilungsschluessel">
+      <path value="Fall.Abteilungskontakt.Fachabteilungsschluessel" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="Fall.Versorgungsstellenkontakt">
       <path value="Fall.Versorgungsstellenkontakt" />
       <min value="0" />
       <max value="*" />
