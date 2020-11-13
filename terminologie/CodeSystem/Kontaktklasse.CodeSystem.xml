@@ -1,23 +1,23 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fallklasse" />
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Kontaktklasse" />
     <version value="0.9" />
-    <name value="Fallklasse" />
+    <name value="Kontaktklasse" />
     <status value="draft" />
     <experimental value="true" />
     <date value="2020-01-21" />
     <publisher value="Medizininformatik Initative" />
-    <description value="Fallklasse eines Kontaktes" />
+    <description value="Kontaktklasse eines Kontaktes" />
     <caseSensitive value="true" />
-    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Fallklasse" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktklasse" />
     <hierarchyMeaning value="is-a" />
     <content value="complete" />
     <concept>
-        <code value="stationaer" />
-        <display value="Stationär" />
+        <code value="I" />
+        <display value="stationär" />
         <definition value="Stationärer Aufenthalt in einem Krankenhausbett auf einem Zimmer einer Krankenhausstation" />
         <concept>
-            <code value="vorstationaer" />
-            <display value="Vorstationär" />
+            <code value="V" />
+            <display value="vorstationär" />
         </concept>
         <concept>
             <code value="vollstationaer" />
@@ -28,23 +28,26 @@
             <display value="Intensivstationär" />
         </concept>
         <concept>
-            <code value="nachstationaer" />
-            <display value="Nachstationär" />
+            <code value="NS" />
+            <display value="nachstationär" />
         </concept>
     </concept>
     <concept>
-        <code value="stationsäquivalent" />
+        <code value="stationsaequivalent" />
         <display value="stationsäquivalent" />
         <definition value="Psychiatrische Krankenhäuser mit regionaler Versorgungsverpflichtung sowie Allgemeinkrankenhäuser mit selbständigen, fachärztlich geleiteten psychiatrischen Abteilungen mit regionaler Versorgungsverpflichtung können in medizinisch geeigneten Fällen, wenn eine Indikation für eine stationäre psychiatrische Behandlung vorliegt, anstelle einer vollstationären Behandlung eine stationsäquivalente psychiatrische Behandlung im häuslichen Umfeld erbringen" />
     </concept>
     <concept>
-        <code value="ambulant" />
-        <display value="Ambulant" />
+        <code value="O" />
+        <display value="ambulant" />
         <definition value="Umfasst ambulante Operationen nach § 115b SGB V und eine ambulante spezialfachärztliche Versorgung nach § 116b SGB V" />
     </concept>
     <concept>
-        <code value="teilstationaer" />
-        <display value="Teilstationär" />
+        <code value="TS" />
+        <designation>
+            <language value="de-DE" />
+            <value value="teilstationäre Behandlung" />
+        </designation>
         <definition value="Eine teilstationäre Behandlung unterscheidet sich im Wesentlichen von einer vollstationären Behandlung durch eine regelmäßige, aber nicht zeitlich durchgehende Anwesenheit der Patientin oder des Patienten im Krankenhaus. Im Rahmen der teilstationären Behandlung kann Unterkunft und Verpflegung gewährt werden." />
     </concept>
     <concept>
@@ -59,7 +62,49 @@
     </concept>
     <concept>
         <code value="ub" />
-        <display value="Untersuchung und Behandlung" />
         <definition value="Aufenthalt auf einer Funktionsabteilung zur Durchführung spezieller diagnostischer/therapeutischer Maßnahmen" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Untersuchung und Behandlung" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="E" />
+        <display value="Emergency" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Notfall" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="R" />
+        <display value="Recurring Patient" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Wiederholungspatient" />
+        </designation>
+    </concept>
+        <concept>
+        <code value="TK" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Tagesklinische Behandlung" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="H" />
+        <display value="Hospital Only" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Begleitperson" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="P" />
+        <display value="Preadmit" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Voraufnahme" />
+        </designation>
     </concept>
 </CodeSystem>
