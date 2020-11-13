@@ -1,0 +1,64 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Kontaktklasse" />
+    <version value="1.0" />
+    <name value="Kontaktklasse" />
+    <status value="active" />
+    <experimental value="false" />
+    <publisher value="Medizininformatik Initative" />
+    <description value="CodeSystem für Kontaktklasse" />
+    <caseSensitive value="true" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktklasse" />
+    <content value="complete" />
+    <concept>
+        <code value="R" />
+        <display value="recurring patient" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Wiederholungspatient" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="B" />
+        <display value="Obstetrics" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Geburtshilfe" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="H" />
+        <display value="Hospital Only" />
+        <designation>
+            <language value="de-DE" />
+            <value value="Begleitperson" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="V" />
+        <designation>
+            <language value="de-DE" />
+            <value value="vorstationär" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="NS" />
+        <designation>
+            <language value="de-DE" />
+            <value value="nachstationär" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="TS" />
+        <designation>
+            <language value="de-DE" />
+            <value value="teilstationäre Behandlung" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="TK" />
+        <designation>
+            <language value="de-DE" />
+            <value value="tagesklinische Behandlung" />
+        </designation>
+    </concept>
+</CodeSystem>
