@@ -61,4 +61,18 @@
             <value value="tagesklinische Behandlung" />
         </designation>
     </concept>
+    <concept>
+        <code value="normalstationaer" />
+        <designation>
+            <language value="de-DE" />
+            <value value="normalstationär" />
+        </designation>
+    </concept>
+    <concept>
+        <code value="intensivstationaer" />
+        <designation>
+            <language value="de-DE" />
+            <value value="intensivstationär" />
+        </designation>
+    </concept>
 </CodeSystem>
