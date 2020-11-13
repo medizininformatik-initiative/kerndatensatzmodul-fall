@@ -1,0 +1,27 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Kontaktebene" />
+    <version value="1.0" />
+    <name value="Kontaktebene" />
+    <status value="active" />
+    <experimental value="false" />
+    <publisher value="Medizininformatik Initative" />
+    <description value="CodeSystem für Kontaktebene" />
+    <caseSensitive value="true" />
+    <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
+    <content value="complete" />
+    <concept>
+        <code value="einrichtungsebene" />
+        <display value="Einrichtungskontakt" />
+        <definition value="Beschreibt den Kontakt zur Einrichtung." />
+    </concept>
+    <concept>
+        <code value="abteilungsebene" />
+        <display value="Abteilungskontakt" />
+        <definition value="Beschreibt den Kontakt zur Abteilung." />
+    </concept>
+    <concept>
+        <code value="versorgungsstellenebene" />
+        <display value="Versorgungsstellenkontakt" />
+        <definition value="Beschreibt den Kontakt zur Versorgungsstelle." />
+    </concept>
+</CodeSystem>
