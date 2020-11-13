@@ -1,1 +1,4 @@
 /fhirpkg.lock.json
+
+# VS Code local history
+.history/
