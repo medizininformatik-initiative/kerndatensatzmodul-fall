@@ -10,17 +10,17 @@
     <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
     <content value="complete" />
     <concept>
-        <code value="einrichtungsebene" />
+        <code value="einrichtungskontakt" />
         <display value="Einrichtungskontakt" />
         <definition value="Beschreibt den Kontakt zur Einrichtung." />
     </concept>
     <concept>
-        <code value="abteilungsebene" />
+        <code value="abteilungskontakt" />
         <display value="Abteilungskontakt" />
         <definition value="Beschreibt den Kontakt zur Abteilung." />
     </concept>
     <concept>
-        <code value="versorgungsstellenebene" />
+        <code value="versorgungsstellenkontakt" />
         <display value="Versorgungsstellenkontakt" />
         <definition value="Beschreibt den Kontakt zur Versorgungsstelle." />
     </concept>
