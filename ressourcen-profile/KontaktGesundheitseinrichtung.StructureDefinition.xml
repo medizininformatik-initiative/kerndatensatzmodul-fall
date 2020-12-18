@@ -112,19 +112,18 @@
       <max value="1" />
       <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="VN" />
       </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier:aufnahmenummer.type.coding:vn-type.system">
       <path value="Encounter.identifier.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier:aufnahmenummer.type.coding:vn-type.code">
       <path value="Encounter.identifier.type.coding.code" />
       <min value="1" />
-      <fixedCode value="VN" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.status">
