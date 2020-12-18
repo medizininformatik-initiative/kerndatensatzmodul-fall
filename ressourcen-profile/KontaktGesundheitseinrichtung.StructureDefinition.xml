@@ -175,7 +175,6 @@
     <element id="Encounter.type.coding:kontaktEbene.system">
       <path value="Encounter.type.coding.system" />
       <min value="1" />
-      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Kontaktebene" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.type.coding:kontaktEbene.code">
