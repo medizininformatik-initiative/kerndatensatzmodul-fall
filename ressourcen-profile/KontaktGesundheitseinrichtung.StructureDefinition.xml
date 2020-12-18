@@ -146,10 +146,6 @@
     </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.type.coding">
-      <path value="Encounter.type.coding" />
       <slicing>
         <discriminator>
           <type value="pattern" />
@@ -159,28 +155,16 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.type.coding:kontaktEbene">
-      <path value="Encounter.type.coding" />
-      <sliceName value="kontaktEbene" />
+    <element id="Encounter.type:kontaktebene">
+      <path value="Encounter.type" />
+      <sliceName value="kontaktebene" />
       <max value="1" />
-      <patternCoding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
-      </patternCoding>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
+        <description value="Kontaktebene" />
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
       </binding>
-    </element>
-    <element id="Encounter.type.coding:kontaktEbene.system">
-      <path value="Encounter.type.coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.type.coding:kontaktEbene.code">
-      <path value="Encounter.type.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Encounter.serviceType">
       <path value="Encounter.serviceType" />
