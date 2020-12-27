@@ -127,6 +127,16 @@
       <fixedCode value="VN" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.identifier:aufnahmenummer.system">
+      <path value="Encounter.identifier.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.identifier:aufnahmenummer.value">
+      <path value="Encounter.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
       <short value="planned | | in-progress | onleave | finished | cancelled +" />
