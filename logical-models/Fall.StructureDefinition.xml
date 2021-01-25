@@ -22,6 +22,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt">
       <path value="Fall.Einrichtungskontakt" />
+      <definition value="Beschreibt den Kontakt zur Einrichtung, bestimmt durch den Behandlungsvertrag." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -30,6 +31,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.KontaktEbene">
       <path value="Fall.Einrichtungskontakt.KontaktEbene" />
+      <definition value="Für die Unterscheidung der Kontakt-Hierarchieebenen im Modul FALL werden folgende Ausprägungen unterschieden:&#xD;&#xA;&#xD;&#xA;1. Einrichtungskontakt&#xD;&#xA;&#xD;&#xA;2. Abteilungskontakt&#xD;&#xA;&#xD;&#xA;3. Versorgungsstellenkontakt&#xD;&#xA;&#xD;&#xA;Diese Gliederung gilt zunächst für stationäre Kontakte (siehe Kontakt-Klasse). Die Übertragung auf ambulante und teilstationäre Kontakte muss noch abgestimmt werden." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -39,6 +41,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.KontaktKlasse">
       <path value="Fall.Einrichtungskontakt.KontaktKlasse" />
+      <definition value="Auf Einrichtungsebene, also auf der Kontakt-Ebene Einrichtungskontakt, kann die Kontakt-Klasse stationär, ambulant oder teilstationär sein." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -48,6 +51,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.PatientenIdentifikator">
       <path value="Fall.Einrichtungskontakt.PatientenIdentifikator" />
+      <definition value="Bei der internen Nutzung dient die sogenannte Patientennummer als Identifikator. Diese wird bei der ersten Aufnahme in die Einrichtung parallel zur ersten Fallnummer (Aufnahmenummer) vergeben. Bei jeder Wiederaufnahme (oder korrigierend danach) erfolgt eine Zuordnung zu dieser konstanten Patientennummer und die Vergabe einer neuen wechselnden Fallnummer." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -57,6 +61,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.Aufnahmenummer">
       <path value="Fall.Einrichtungskontakt.Aufnahmenummer" />
+      <definition value="Jeder Patient erhält bei der Planung einer Aufnahme oder bei der Aufnahme selbst eine Aufnahmenummer (auch Fallnummer oder Krankenhausinternes Kennzeichen genannt). Im Prinzip gilt diese Aufnahmenummer von der Aufnahme bis zur Entlassung - und auch bei den zugehörigen vorstationären und nachstationären Kontakten. Sie dient bei allen digital unterstüzten Vorgängen der Zuordnung zu dem Aufenthalt des Patienten in der Einrichtung." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -66,6 +71,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.Aufnahmeanlass">
       <path value="Fall.Einrichtungskontakt.Aufnahmeanlass" />
+      <short value="Gemäß §21 KHEntgG" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -75,6 +81,8 @@
     </element>
     <element id="Fall.Einrichtungskontakt.Aufnahmegrund">
       <path value="Fall.Einrichtungskontakt.Aufnahmegrund" />
+      <short value="Gemäß §21 KHEntgG" />
+      <definition value="Es ist der Aufnahmegrund entsprechend Schlüssel 1 der Anlage 2 zur § 301-Vereinbarung anzugeben. Als 3. und 4. Stelle (xx) sind die nach Schlüssel 1 möglichen Werte (01 bis 07, bei tagesbezogenen Ent- gelten auch 21 bis 27) anzugeben. Fälle mit den Werten „41“ bis „47“ in der 3. und 4. Stelle (Behandlun- gen im Rahmen von Verträgen zur integrierten Versorgung) können übermittelt werden.&#xD;&#xA;Der Aufnahmegrund kann bei Begleitpersonen und mitaufgenommenen Pflegekräften (Aufnahmeanlass „B“) entfallen. In allen anderen Fällen ist der Aufnahmegrund eine Muss-Angabe." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -102,6 +110,7 @@
     </element>
     <element id="Fall.Einrichtungskontakt.Entlassungsgrund">
       <path value="Fall.Einrichtungskontakt.Entlassungsgrund" />
+      <short value="Gemäß §21 KHEntgG" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -119,13 +128,14 @@
     </element>
     <element id="Fall.Abteilungskontakt.KontaktEbene">
       <path value="Fall.Abteilungskontakt.KontaktEbene" />
+      <definition value="Für die Unterscheidung der Kontakt-Hierarchieebenen im Modul FALL werden folgende Ausprägungen unterschieden:&#xD;&#xA;&#xD;&#xA;1. Einrichtungskontakt&#xD;&#xA;&#xD;&#xA;2. Abteilungskontakt&#xD;&#xA;&#xD;&#xA;3. Versorgungsstellenkontakt&#xD;&#xA;&#xD;&#xA;Diese Gliederung gilt zunächst für stationäre Kontakte (siehe Kontakt-Klasse). Die Übertragung auf ambulante und teilstationäre Kontakte muss noch abgestimmt werden." />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Identifier" />
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
-    </element>    
+    </element>
     <element id="Fall.Abteilungskontakt.KontaktKlasse">
       <path value="Fall.Abteilungskontakt.KontaktKlasse" />
       <min value="0" />
@@ -137,6 +147,7 @@
     </element>
     <element id="Fall.Abteilungskontakt.PatientenIdentifikator">
       <path value="Fall.Abteilungskontakt.PatientenIdentifikator" />
+      <definition value="Bei der internen Nutzung dient die sogenannte Patientennummer als Identifikator. Diese wird bei der ersten Aufnahme in die Einrichtung parallel zur ersten Fallnummer (Aufnahmenummer) vergeben. Bei jeder Wiederaufnahme (oder korrigierend danach) erfolgt eine Zuordnung zu dieser konstanten Patientennummer und die Vergabe einer neuen wechselnden Fallnummer." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -146,6 +157,7 @@
     </element>
     <element id="Fall.Abteilungskontakt.Aufnahmenummer">
       <path value="Fall.Abteilungskontakt.Aufnahmenummer" />
+      <definition value="Jeder Patient erhält bei der Planung einer Aufnahme oder bei der Aufnahme selbst eine Aufnahmenummer (auch Fallnummer oder Krankenhausinternes Kennzeichen genannt). Im Prinzip gilt diese Aufnahmenummer von der Aufnahme bis zur Entlassung - und auch bei den zugehörigen vorstationären und nachstationären Kontakten. Sie dient bei allen digital unterstüzten Vorgängen der Zuordnung zu dem Aufenthalt des Patienten in der Einrichtung. Im MII KDS dient sie als Identifikator bzw. Referenz zum Einrichtungskontakt." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -173,6 +185,7 @@
     </element>
     <element id="Fall.Abteilungskontakt.Fachabteilungsschluessel">
       <path value="Fall.Abteilungskontakt.Fachabteilungsschluessel" />
+      <definition value="Bis auf Weiteres wird der proprietäre deutsche  Fachabteilungsschlüssel des § 301 SGB V und des Datensatzes gemäß § 21 KHentgG als Fachrichtungsschlüssel genutzt, weil dieser in jedem Krankenhaus als |Fachabteilungsschlüssel im Einsatz ist. Der Einsatz des IHE-Fachabteilungsschlüssel wird geprüft, sobald einschlägige Anforderungen formuliert werden." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -190,13 +203,14 @@
     </element>
     <element id="Fall.Versorgungsstellenkontakt.KontaktEbene">
       <path value="Fall.Versorgungsstellenkontakt.KontaktEbene" />
+      <definition value="Für die Unterscheidung der Kontakt-Hierarchieebenen im Modul FALL werden folgende Ausprägungen unterschieden:&#xD;&#xA;&#xD;&#xA;1. Einrichtungskontakt&#xD;&#xA;&#xD;&#xA;2. Abteilungskontakt&#xD;&#xA;&#xD;&#xA;3. Versorgungsstellenkontakt&#xD;&#xA;&#xD;&#xA;Diese Gliederung gilt zunächst für stationäre Kontakte (siehe Kontakt-Klasse). Die Übertragung auf ambulante und teilstationäre Kontakte muss noch abgestimmt werden." />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Identifier" />
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
-    </element>    
+    </element>
     <element id="Fall.Versorgungsstellenkontakt.KontaktKlasse">
       <path value="Fall.Versorgungsstellenkontakt.KontaktKlasse" />
       <min value="0" />
@@ -208,6 +222,7 @@
     </element>
     <element id="Fall.Versorgungsstellenkontakt.PatientenIdentifikator">
       <path value="Fall.Versorgungsstellenkontakt.PatientenIdentifikator" />
+      <definition value="Bei der internen Nutzung dient die sogenannte Patientennummer als Identifikator. Diese wird bei der ersten Aufnahme in die Einrichtung parallel zur ersten Fallnummer (Aufnahmenummer) vergeben. Bei jeder Wiederaufnahme (oder korrigierend danach) erfolgt eine Zuordnung zu dieser konstanten Patientennummer und die Vergabe einer neuen wechselnden Fallnummer." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -217,6 +232,7 @@
     </element>
     <element id="Fall.Versorgungsstellenkontakt.Aufnahmenummer">
       <path value="Fall.Versorgungsstellenkontakt.Aufnahmenummer" />
+      <definition value="Jeder Patient erhält bei der Planung einer Aufnahme oder bei der Aufnahme selbst eine Aufnahmenummer (auch Fallnummer oder Krankenhausinternes Kennzeichen genannt). Im Prinzip gilt diese Aufnahmenummer von der Aufnahme bis zur Entlassung - und auch bei den zugehörigen vorstationären und nachstationären Kontakten. Sie dient bei allen digital unterstüzten Vorgängen der Zuordnung zu dem Aufenthalt des Patienten in der Einrichtung. Im MII KDS dient sie als Identifikator bzw. Referenz zum Einrichtungskontakt." />
       <min value="0" />
       <max value="*" />
       <type>
