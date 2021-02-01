@@ -1,5 +1,4 @@
 {
-    "resource": {
       "resourceType": "Encounter",
       "id": "5844e89b-c8f3-4e26-bc0f-502e00293874",
       "meta": {
@@ -76,4 +75,3 @@
         "end": "2020-01-11T05:00:00+01:00"
       }
     }
-  }
