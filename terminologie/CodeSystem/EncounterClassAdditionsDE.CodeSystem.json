@@ -3,7 +3,7 @@
   "title": "Medizininformatik-Initiative - CodeSystem - EncounterClassAdditionsDE",
   "name": "EncounterClassAdditionsDE",
   "experimental": false,
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/EncounterClassAdditionsDE",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/EncounterClassAdditionsDE",
   "version": "1.0",
   "status": "active",
   "compositional": false,

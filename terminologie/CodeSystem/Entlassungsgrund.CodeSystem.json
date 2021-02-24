@@ -6,7 +6,7 @@
     ]
   },
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund",
-  "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-fall/core/ValueSet/Entlassungsgrund",
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Entlassungsgrund",
   "experimental": false,
   "date": "2020-05-09",
   "publisher": "Medizininformatik Initiative",
@@ -20,52 +20,84 @@
   "content": "complete",
   "concept": [
     {
-      "code": "01",
-      "display": "Behandlung regulär beendet"
+      "code": "011",
+      "display": "Behandlung regulär beendet, arbeitsfähig entlassen"
     },
     {
-      "code": "02",
-      "display": "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen"
+      "code": "012",
+      "display": "Behandlung regulär beendet, arbeitsunfähig entlassen"
     },
     {
-      "code": "03",
-      "display": "Behandlung aus sonstigen Gründen beendet"
+      "code": "019",
+      "display": "Behandlung regulär beendet, keine Angabe"
     },
     {
-      "code": "04",
-      "display": "Behandlung gegen ärztlichen Rat beendet"
+      "code": "021",
+      "display": "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen, arbeitsfähig entlassen"
     },
     {
-      "code": "05",
+      "code": "022",
+      "display": "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen, arbeitsunfähig entlassen"
+    },
+    {
+      "code": "029",
+      "display": "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen, keine Angabe"
+    },
+    {
+      "code": "031",
+      "display": "Behandlung aus sonstigen Gründen beendet, arbeitsfähig entlassen"
+    },
+    {
+      "code": "032",
+      "display": "Behandlung aus sonstigen Gründen beendet, arbeitsunfähig entlassen"
+    },
+    {
+      "code": "039",
+      "display": "Behandlung aus sonstigen Gründen beendet, keine Angabe"
+    },
+    {
+      "code": "041",
+      "display": "Behandlung gegen ärztlichen Rat beendet, arbeitsfähig entlassen"
+    },
+    {
+      "code": "042",
+      "display": "Behandlung gegen ärztlichen Rat beendet, arbeitsunfähig entlassen"
+    },
+    {
+      "code": "049",
+      "display": "Behandlung gegen ärztlichen Rat beendet, keine Angabe"
+    },
+    {
+      "code": "059",
       "display": "Zuständigkeitswechsel des Kostenträgers"
     },
     {
-      "code": "06",
+      "code": "069",
       "display": "Verlegung in ein anderes Krankenhaus"
     },
     {
-      "code": "07",
+      "code": "079",
       "display": "Tod"
     },
     {
-      "code": "08",
+      "code": "089",
       "display": "Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)"
     },
     {
-      "code": "09",
+      "code": "099",
       "display": "Entlassung in eine Rehabilitationseinrichtung"
     },
     {
-      "code": "10",
+      "code": "109",
       "display": "Entlassung in eine Pflegeeinrichtung"
     },
     {
-      "code": "11",
+      "code": "119",
       "display": "Entlassung in ein Hospiz"
     },
     {
-      "code": "12",
-      "display": "interne Verlegung"
+      "code": "121",
+      "display": "interne Verlegung, arbeitsfähig entlassen"
     },
     {
       "code": "13",
