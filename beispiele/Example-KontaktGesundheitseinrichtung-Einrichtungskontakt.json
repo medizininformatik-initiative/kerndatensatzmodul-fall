@@ -22,9 +22,9 @@
         }
       ],
       "class": {
-        "code": "I",
+        "code": "IMP",
         "display": "Inpatient",
-        "system": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/EncounterClassDE"
+        "system": "http://hl7.org/fhir/v3/ActCode/cs.html"
       },
       "subject": {
         "reference": "Patient/2b9d3335-70df-4055-b33d-27a55fe00855"
