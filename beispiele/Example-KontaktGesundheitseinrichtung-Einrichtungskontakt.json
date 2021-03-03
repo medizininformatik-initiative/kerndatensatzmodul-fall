@@ -3,7 +3,7 @@
       "id": "5844e89b-c8f3-4e26-bc0f-502e00293874",
       "meta": {
         "profile": [
-          "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung"
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
         ]
       },
       "status": "finished",
@@ -17,7 +17,7 @@
               }
             ]
           },
-          "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/Ariolo",
+          "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/MusterKrankenhaus",
           "value": "F_0000002"
         }
       ],
@@ -31,8 +31,8 @@
       },
       "serviceProvider": {
         "identifier": {
-          "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Einrichtungsidentifikator/Ariolo",
-          "value": "260123451_Airolo"
+          "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Einrichtungsidentifikator/MusterKrankenhaus",
+          "value": "260123451_MusterKrankenhaus"
         }
       },
       "diagnosis": [
