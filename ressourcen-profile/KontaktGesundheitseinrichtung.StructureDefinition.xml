@@ -169,6 +169,11 @@
       <path value="Encounter.type" />
       <sliceName value="kontaktebene" />
       <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
