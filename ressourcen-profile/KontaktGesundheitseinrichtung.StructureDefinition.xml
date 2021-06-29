@@ -183,8 +183,8 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
-      <short value="planned | | in-progress | onleave | finished | cancelled +" />
-      <definition value="planned | | in-progress | onleave | finished | cancelled +" />
+      <short value="planned | in-progress | onleave | finished | cancelled +" />
+      <definition value="planned | in-progress | onleave | finished | cancelled +" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
@@ -195,8 +195,8 @@
       <path value="Encounter.class" />
       <mustSupport value="true" />
       <binding>
-        <strength value="extensible" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/EncounterClassDE" />
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/EncounterClassDE" />
       </binding>
     </element>
     <element id="Encounter.type">
