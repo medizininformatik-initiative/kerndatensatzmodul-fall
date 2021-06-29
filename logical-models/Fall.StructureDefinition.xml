@@ -16,9 +16,6 @@
       <path value="Fall" />
       <min value="0" />
       <max value="*" />
-      <type>
-        <code value="Element" />
-      </type>
     </element>
     <element id="Fall.Einrichtungskontakt">
       <path value="Fall.Einrichtungskontakt" />
