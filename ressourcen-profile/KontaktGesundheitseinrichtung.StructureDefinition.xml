@@ -65,6 +65,51 @@
       <path value="Encounter.meta.profile" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.extension">
+      <path value="Encounter.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.extension:Aufnahmegrund">
+      <path value="Encounter.extension" />
+      <sliceName value="Aufnahmegrund" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/Aufnahmegrund" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.extension:Aufnahmegrund.extension">
+      <path value="Encounter.extension.extension" />
+      <slicing>
+          <discriminator>
+              <type value="value" />
+              <path value="url" />
+          </discriminator>
+          <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.extension:Aufnahmegrund.extension:ErsteUndZweiteStelle">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="ErsteUndZweiteStelle" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.extension:Aufnahmegrund.extension:DritteStelle">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="DritteStelle" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.extension:Aufnahmegrund.extension:VierteStelle">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="VierteStelle" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
       <slicing>
@@ -240,39 +285,6 @@
     </element>
     <element id="Encounter.period.end">
       <path value="Encounter.period.end" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.reasonCode.coding">
-      <path value="Encounter.reasonCode.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.reasonCode.coding:aufnahmegrund">
-      <path value="Encounter.reasonCode.coding" />
-      <sliceName value="aufnahmegrund" />
-      <max value="1" />
-      <patternCoding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/modul-fall/core/CodeSystem/Aufnahmegrund" />
-      </patternCoding>
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/modul-fall/core/ValueSet/Aufnahmegrund" />
-      </binding>
-    </element>
-    <element id="Encounter.reasonCode.coding:aufnahmegrund.system">
-      <path value="Encounter.reasonCode.coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.reasonCode.coding:aufnahmegrund.code">
-      <path value="Encounter.reasonCode.coding.code" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.diagnosis">
