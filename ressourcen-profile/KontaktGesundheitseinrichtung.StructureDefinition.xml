@@ -314,10 +314,12 @@
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
       </type>
       <mustSupport value="true" />
+      <min value="1" />
     </element>
     <element id="Encounter.diagnosis.use">
       <path value="Encounter.diagnosis.use" />
       <mustSupport value="true" />
+      <min value="1" />
     </element>
     <element id="Encounter.diagnosis.rank">
       <path value="Encounter.diagnosis.rank" />
