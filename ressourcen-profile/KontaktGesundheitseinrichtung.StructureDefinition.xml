@@ -342,41 +342,24 @@
       <path value="Encounter.hospitalization.dischargeDisposition" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+    <element id="Encounter.hospitalization.dischargeDisposition.extension">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
+          <type value="value" />
+            <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
-      <sliceName value="entlassungsgrund" />
-      <min value="1" />
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
+      <sliceName value="Entlassungsgrund" />
       <max value="1" />
-      <patternCoding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
-      </patternCoding>
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Entlassungsgrund" />
-      </binding>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund.system">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
-      <min value="1" />
-      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding:entlassungsgrund.code">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding.code" />
-      <min value="1" />
+      <type>
+        <code value="Extension" />
+         <profile value="http://fhir.de/StructureDefinition/Entlassungsgrund" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Encounter.location">
