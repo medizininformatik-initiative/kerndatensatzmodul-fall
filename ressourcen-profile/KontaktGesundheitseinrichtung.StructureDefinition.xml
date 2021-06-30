@@ -210,20 +210,36 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.type:kontaktebene">
+    <element id="Encounter.type:Kontaktebene">
       <path value="Encounter.type" />
-      <sliceName value="kontaktebene" />
+      <sliceName value="Kontaktebene" />
       <max value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
+          <system value="http://fhir.de/CodeSystem/Kontaktebene" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Kontaktebene" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Kontaktebene" />
+        <valueSet value="http://fhir.de/ValueSet/kontaktebene-de" />
+      </binding>
+    </element>
+    <element id="Encounter.type:KontaktArt">
+      <path value="Encounter.type" />
+      <sliceName value="KontaktArt" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/kontaktart-de" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/kontaktart-de" />
       </binding>
     </element>
     <element id="Encounter.serviceType">
