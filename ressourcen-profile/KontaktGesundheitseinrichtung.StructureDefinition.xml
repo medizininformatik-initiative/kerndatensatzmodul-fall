@@ -257,25 +257,25 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.serviceType.coding:fachabteilungsschluessel">
+    <element id="Encounter.serviceType.coding:Fachabteilungsschluessel">
       <path value="Encounter.serviceType.coding" />
-      <sliceName value="fachabteilungsschluessel" />
+      <sliceName value="Fachabteilungsschluessel" />
       <max value="1" />
       <patternCoding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel" />
+        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
       </patternCoding>
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Fachabteilungsschluessel" />
+        <valueSet value="http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel" />
       </binding>
     </element>
-    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.system">
+    <element id="Encounter.serviceType.coding:Fachabteilungsschluessel.system">
       <path value="Encounter.serviceType.coding.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.code">
+    <element id="Encounter.serviceType.coding:Fachabteilungsschluessel.code">
       <path value="Encounter.serviceType.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
