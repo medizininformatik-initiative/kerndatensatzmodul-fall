@@ -41,13 +41,6 @@
         <expression value="status = 'finished' implies period.end.exists()" />
         <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung" />
       </constraint>
-      <constraint>
-        <key value="mii-enc-2" />
-        <severity value="error" />
-        <human value="Falls der Encounter abgeschlossen wurde muss eine Diagnose bekannt sein" />
-        <expression value="status = 'finished' implies diagnosis.exists()" />
-        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Encounter/KontaktGesundheitseinrichtung" />
-      </constraint>
     </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
@@ -121,9 +114,9 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer">
+    <element id="Encounter.identifier:Aufnahmenummer">
       <path value="Encounter.identifier" />
-      <sliceName value="aufnahmenummer" />
+      <sliceName value="Aufnahmenummer" />
       <max value="1" />
       <patternIdentifier>
         <type>
@@ -135,12 +128,12 @@
       </patternIdentifier>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.type">
+    <element id="Encounter.identifier:Aufnahmenummer.type">
       <path value="Encounter.identifier.type" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.type.coding">
+    <element id="Encounter.identifier:Aufnahmenummer.type.coding">
       <path value="Encounter.identifier.type.coding" />
       <slicing>
         <discriminator>
@@ -150,7 +143,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.type.coding:vn-type">
+    <element id="Encounter.identifier:Aufnahmenummer.type.coding:vn-type">
       <path value="Encounter.identifier.type.coding" />
       <sliceName value="vn-type" />
       <min value="1" />
@@ -161,22 +154,22 @@
       </patternCoding>
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.type.coding:vn-type.system">
+    <element id="Encounter.identifier:Aufnahmenummer.type.coding:vn-type.system">
       <path value="Encounter.identifier.type.coding.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.type.coding:vn-type.code">
+    <element id="Encounter.identifier:Aufnahmenummer.type.coding:vn-type.code">
       <path value="Encounter.identifier.type.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.system">
+    <element id="Encounter.identifier:Aufnahmenummer.system">
       <path value="Encounter.identifier.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.identifier:aufnahmenummer.value">
+    <element id="Encounter.identifier:Aufnahmenummer.value">
       <path value="Encounter.identifier.value" />
       <min value="1" />
       <mustSupport value="true" />
