@@ -332,41 +332,11 @@
     <element id="Encounter.hospitalization.admitSource">
       <path value="Encounter.hospitalization.admitSource" />
       <mustSupport value="true" />
-    </element>
-    <element id="Encounter.hospitalization.admitSource.coding">
-      <path value="Encounter.hospitalization.admitSource.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
-    </element>
-    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass">
-      <path value="Encounter.hospitalization.admitSource.coding" />
-      <sliceName value="aufnahmeanlass" />
-      <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Aufnahmeanlass" />
-      </patternCoding>
       <binding>
-        <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/Aufnahmeanlass" />
+        <strength value="preferred" />
+        <valueSet value="http://fhir.de/ValueSet/dgkev/Aufnahmeanlass" />
       </binding>
-    </element>
-    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass.system">
-      <path value="Encounter.hospitalization.admitSource.coding.system" />
-      <min value="1" />
-      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Aufnahmeanlass" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.hospitalization.admitSource.coding:aufnahmeanlass.code">
-      <path value="Encounter.hospitalization.admitSource.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition" />
