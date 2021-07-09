@@ -181,7 +181,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/RestrictedEncounterStatus" />
+        <valueSet value="http://fhir.de/ValueSet/EncounterStatusDe" />
       </binding>
     </element>
     <element id="Encounter.class">
