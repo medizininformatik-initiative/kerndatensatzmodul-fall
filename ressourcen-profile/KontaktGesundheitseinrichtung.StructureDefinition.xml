@@ -320,6 +320,7 @@
     </element>
     <element id="Encounter.hospitalization">
       <path value="Encounter.hospitalization" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource">
