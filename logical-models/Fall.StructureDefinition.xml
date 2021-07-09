@@ -36,8 +36,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
     </element>
-    <element id="Fall.Einrichtungskontakt.KontaktKlasse">
-      <path value="Fall.Einrichtungskontakt.KontaktKlasse" />
+    <element id="Fall.Einrichtungskontakt.KontaktArt">
+      <path value="Fall.Einrichtungskontakt.KontaktArt" />
       <definition value="Auf Einrichtungsebene, also auf der Kontakt-Ebene Einrichtungskontakt, kann die Kontakt-Klasse stationär, ambulant oder teilstationär sein." />
       <min value="0" />
       <max value="*" />
@@ -133,8 +133,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
     </element>
-    <element id="Fall.Abteilungskontakt.KontaktKlasse">
-      <path value="Fall.Abteilungskontakt.KontaktKlasse" />
+    <element id="Fall.Abteilungskontakt.KontaktArt">
+      <path value="Fall.Abteilungskontakt.KontaktArt" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -208,8 +208,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
     </element>
-    <element id="Fall.Versorgungsstellenkontakt.KontaktKlasse">
-      <path value="Fall.Versorgungsstellenkontakt.KontaktKlasse" />
+    <element id="Fall.Versorgungsstellenkontakt.KontaktArt">
+      <path value="Fall.Versorgungsstellenkontakt.KontaktArt" />
       <min value="0" />
       <max value="*" />
       <type>
