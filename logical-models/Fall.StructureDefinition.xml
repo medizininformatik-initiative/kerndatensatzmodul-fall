@@ -36,9 +36,19 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
     </element>
+    <element id="Fall.Einrichtungskontakt.KontaktKlasse">
+      <path value="Fall.Einrichtungskontakt.KontaktKlasse" />
+      <definition value="Auf Einrichtungsebene, also auf der Kontakt-Ebene Einrichtungskontakt, kann die Kontakt-Klasse stationär, ambulant oder teilstationär sein." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
     <element id="Fall.Einrichtungskontakt.KontaktArt">
       <path value="Fall.Einrichtungskontakt.KontaktArt" />
-      <definition value="Auf Einrichtungsebene, also auf der Kontakt-Ebene Einrichtungskontakt, kann die Kontakt-Klasse stationär, ambulant oder teilstationär sein." />
+      <definition value="Differenzierung zwischen verschiedenen Arten von Kontakten (z.B. vorstationär, nachstationär, intensivstationär)" />
       <min value="0" />
       <max value="*" />
       <type>
