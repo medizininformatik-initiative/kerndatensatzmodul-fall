@@ -222,7 +222,6 @@
     <element id="Encounter.type:KontaktArt">
       <path value="Encounter.type" />
       <sliceName value="KontaktArt" />
-      <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
         <coding>
