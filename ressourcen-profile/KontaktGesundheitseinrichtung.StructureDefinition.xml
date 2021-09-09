@@ -81,11 +81,11 @@
     <element id="Encounter.extension:Aufnahmegrund.extension">
       <path value="Encounter.extension.extension" />
       <slicing>
-          <discriminator>
-              <type value="value" />
-              <path value="url" />
-          </discriminator>
-          <rules value="open" />
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Encounter.extension:Aufnahmegrund.extension:ErsteUndZweiteStelle">
@@ -312,6 +312,9 @@
       <path value="Encounter.diagnosis.use" />
       <mustSupport value="true" />
       <min value="1" />
+      <binding>
+        <strength value="extensible" />
+      </binding>
     </element>
     <element id="Encounter.diagnosis.rank">
       <path value="Encounter.diagnosis.rank" />
@@ -340,7 +343,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-            <path value="url" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -351,7 +354,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-         <profile value="http://fhir.de/StructureDefinition/Entlassungsgrund" />
+        <profile value="http://fhir.de/StructureDefinition/Entlassungsgrund" />
       </type>
       <mustSupport value="true" />
     </element>
