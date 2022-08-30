@@ -33,13 +33,13 @@ Title: "Medizininformatik-Initative - StructureDefinition - Kontakt mit einer Ge
 * identifier ^slicing.rules = #open
 * identifier contains Aufnahmenummer 0..1 MS
 * identifier[Aufnahmenummer] 
-  * ^patternIdentifier.type = $v2-0203#VN
+  * ^patternIdentifier.type = $CS-V2-0203#VN
   * type 1.. MS
     * coding ^slicing.discriminator.type = #pattern
     * coding ^slicing.discriminator.path = "$this"
     * coding ^slicing.rules = #open
     * coding contains vn-type 1..1 MS
-    * coding[vn-type] = $v2-0203#VN
+    * coding[vn-type] = $CS-V2-0203#VN
     * coding[vn-type].system 1.. MS
     * coding[vn-type].code 1.. MS
   * system 1.. MS
@@ -56,11 +56,11 @@ Title: "Medizininformatik-Initative - StructureDefinition - Kontakt mit einer Ge
 * type ^slicing.rules = #open
 * type contains
     Kontaktebene 1..1 MS and
-    KontaktArt 0..1 MS
+    Kontaktart 0..1 MS
 * type[Kontaktebene] from $VSKontaktebene (required)
   * ^patternCodeableConcept.coding.system = $CSKontaktebene
   * ^binding.description = "Kontaktebene"
-* type[KontaktArt] from $VSKontaktart (required)
+* type[Kontaktart] from $VSKontaktart (required)
   * ^patternCodeableConcept.coding.system = $CSKontaktart
   * ^binding.description = "Kontaktart"
 * serviceType MS
@@ -96,6 +96,9 @@ Title: "Medizininformatik-Initative - StructureDefinition - Kontakt mit einer Ge
     * coding[DiagnoseTyp] from $VSDiagnoseTyp (required)
     * coding[DiagnoseSubtyp] from $VSDiagnoseSubtyp (required)
   * rank MS
+* account MS
+  * reference MS
+  * identifier MS
 * hospitalization MS
   * admitSource 1.. MS
   * admitSource from $VSAufnahmeanlass (preferred)
@@ -114,5 +117,47 @@ Severity: #error
 Expression: "status = 'finished' implies period.end.exists()"
 
 // TODO: Examples
+Instance: ex-mii-fall-kontaktgesundheitseinrichtung-abteilungskontakt
+InstanceOf: sd-mii-fall-kontaktgesundheitseinrichtung
+Usage: #example
+Title: "EX MII Fall KontaktGesundheitseinrichtung Abteilungskontakt"
+Description: "Beispiel für Abteilungskontakt"
+* id = "28436186-b5b3-4881-b000-8a89abf659b7"
+* meta.profile[+] = $MII-Encounter
+* extension[Aufnahmegrund]
+  * extension[ErsteUndZweiteStelle]
+    * valueCoding = $CSAufnahmegrundErsteUndZweiteStelle#01 "Krankenhausbehandlung, vollstationär"
+  * extension[DritteStelle]
+    * valueCoding = $CSAufnamegrundDritteStelle#0 "Anderes"
+  * extension[VierteStelle]
+    * valueCoding = $CSAufnahmegrundVierteStelle#1 "Normalfall"
+* identifier[+]
+  * type
+    * coding[+] = $CS-V2-0203#VN
+  * system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/MusterKrankenhaus"
+  * value = "F_0000001"
+* status = #finished
+* class = $CS-V3-ActCode#IMP
+* type[Kontaktebene]
+  * coding = $CSKontaktebene#abteilungskontakt
+* type[Kontaktart]
+  * coding = $CSKontaktart#operation
+* serviceType
+  * coding[Fachabteilungsschluessel] = $CSFachabteilungsschluessel#0100 "Innere Medizin"
+* subject.reference = "Patient/P_0000000"
+* period  
+  * start = "2020-11-02T03:00:00+00:00"
+  * end = "2020-11-02T03:59:59+00:00"
+* diagnosis[+]
+  * condition.reference = "Condition/D_0000001"
+  * use
+    * coding[DiagnoseTyp] = $CSKontaktDiagnoseProzedur#treatment-diagnosis "Behandlungsrelevante Diagnosen"
+* hospitalization
+  * admitSource
+    * coding = $CSAufnahmeanlass#E "Einweisung durch einen Arzt"
+* serviceProvider
+  * identifier
+    * system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Abteilungsidentifikator/MusterKrankenhaus"
+    * value = "1500_ACHI"
 
 

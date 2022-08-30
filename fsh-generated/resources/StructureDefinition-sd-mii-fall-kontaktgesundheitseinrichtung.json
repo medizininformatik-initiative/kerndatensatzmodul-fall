@@ -278,9 +278,9 @@
         }
       },
       {
-        "id": "Encounter.type:KontaktArt",
+        "id": "Encounter.type:Kontaktart",
         "path": "Encounter.type",
-        "sliceName": "KontaktArt",
+        "sliceName": "Kontaktart",
         "min": 0,
         "max": "1",
         "patternCodeableConcept": {
@@ -476,6 +476,21 @@
       {
         "id": "Encounter.diagnosis.rank",
         "path": "Encounter.diagnosis.rank",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.account",
+        "path": "Encounter.account",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.account.reference",
+        "path": "Encounter.account.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.account.identifier",
+        "path": "Encounter.account.identifier",
         "mustSupport": true
       },
       {
