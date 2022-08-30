@@ -1,0 +1,126 @@
+{
+  "resourceType": "Encounter",
+  "id": "28436186-b5b3-4881-b000-8a89abf659b7",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/sd-mii-fall-kontaktgesundheitseinrichtung"
+    ]
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.de/CodeSystem/Kontaktebene",
+          "code": "abteilungskontakt"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.de/CodeSystem/kontaktart-de",
+          "code": "operation"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "ErsteUndZweiteStelle",
+          "valueCoding": {
+            "code": "01",
+            "system": "http://fhir.de/CodeSystem/dkgev/AufnahmegrundErsteUndZweiteStelle",
+            "display": "Krankenhausbehandlung, vollstationär"
+          }
+        },
+        {
+          "url": "DritteStelle",
+          "valueCoding": {
+            "code": "0",
+            "system": "http://fhir.de/CodeSystem/dkgev/AufnahmegrundDritteStelle",
+            "display": "Anderes"
+          }
+        },
+        {
+          "url": "VierteStelle",
+          "valueCoding": {
+            "code": "1",
+            "system": "http://fhir.de/CodeSystem/dkgev/AufnahmegrundVierteStelle",
+            "display": "Normalfall"
+          }
+        }
+      ],
+      "url": "http://fhir.de/StructureDefinition/Aufnahmegrund"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "VN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/MusterKrankenhaus",
+      "value": "F_0000001"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  },
+  "serviceType": {
+    "coding": [
+      {
+        "code": "0100",
+        "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel",
+        "display": "Innere Medizin"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/P_0000000"
+  },
+  "period": {
+    "start": "2020-11-02T03:00:00+00:00",
+    "end": "2020-11-02T03:59:59+00:00"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/D_0000001"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "treatment-diagnosis",
+            "system": "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
+            "display": "Behandlungsrelevante Diagnosen"
+          }
+        ]
+      }
+    }
+  ],
+  "hospitalization": {
+    "admitSource": {
+      "coding": [
+        {
+          "code": "E",
+          "system": "http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass",
+          "display": "Einweisung durch einen Arzt"
+        }
+      ]
+    }
+  },
+  "serviceProvider": {
+    "identifier": {
+      "system": "http://medizininformatik-initiative.de/fhir/NamingSystem/Abteilungsidentifikator/MusterKrankenhaus",
+      "value": "1500_ACHI"
+    }
+  }
+}
