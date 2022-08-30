@@ -33,43 +33,49 @@ Title: "Medizininformatik-Initative - StructureDefinition - Kontakt mit einer Ge
 * identifier ^slicing.rules = #open
 * identifier contains Aufnahmenummer 0..1 MS
 * identifier[Aufnahmenummer] 
-  * ^patternIdentifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#VN
+  * ^patternIdentifier.type = $v2-0203#VN
   * type 1.. MS
     * coding ^slicing.discriminator.type = #pattern
     * coding ^slicing.discriminator.path = "$this"
     * coding ^slicing.rules = #open
     * coding contains vn-type 1..1 MS
-    * coding[vn-type] = http://terminology.hl7.org/CodeSystem/v2-0203#VN
+    * coding[vn-type] = $v2-0203#VN
     * coding[vn-type].system 1.. MS
     * coding[vn-type].code 1.. MS
   * system 1.. MS
   * value 1.. MS
 * status MS
-* status from $EncounterStatusDe (required)
+* status from $VSEncounterStatus (required)
 * status ^short = "planned | in-progress | onleave | finished | cancelled +"
 * status ^definition = "planned | in-progress | onleave | finished | cancelled +"
 * class MS
-* class from $EncounterClassDE (required)
+* class from $VSEncounterClass (required)
 * type MS
 * type ^slicing.discriminator.type = #pattern
 * type ^slicing.discriminator.path = "$this"
 * type ^slicing.rules = #open
 * type contains
-    Kontaktebene 0..1 MS and
+    Kontaktebene 1..1 MS and
     KontaktArt 0..1 MS
-* type[Kontaktebene] from $kontaktebene-de (required)
-  * ^patternCodeableConcept.coding.system = "http://fhir.de/CodeSystem/Kontaktebene"
+* type[Kontaktebene] from $VSKontaktebene (required)
+  * ^patternCodeableConcept.coding.system = $CSKontaktebene
   * ^binding.description = "Kontaktebene"
-* type[KontaktArt] from $kontaktart-de (required)
-  * ^patternCodeableConcept.coding.system = "http://fhir.de/CodeSystem/kontaktart-de"
+* type[KontaktArt] from $VSKontaktart (required)
+  * ^patternCodeableConcept.coding.system = $CSKontaktart
+  * ^binding.description = "Kontaktart"
 * serviceType MS
-  * coding MS
+  * coding 1..* MS
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains Fachabteilungsschluessel 0..1 MS
-  * coding[Fachabteilungsschluessel] from $Fachabteilungsschluessel (extensible)
-    * ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"
+           and ErweiterterFachabteilungsschluessel 0..1 MS
+  * coding[Fachabteilungsschluessel] from $VSFachabteilungsschluessel (required)
+    * ^patternCoding.system = $CSFachabteilungsschluessel
+    * system 1.. MS
+    * code 1.. MS
+  * coding[ErweiterterFachabteilungsschluessel] from $VSFachabteilungsschluesselErweitert (required)
+    * ^patternCoding.system = $CSFachabteilungsschluesselErweitert
     * system 1.. MS
     * code 1.. MS
 * subject 1.. MS
@@ -81,11 +87,18 @@ Title: "Medizininformatik-Initative - StructureDefinition - Kontakt mit einer Ge
   * condition 1.. MS
   * condition only $MII-Reference
   * use 1.. MS
-  * use ^binding.strength = #extensible
+    * coding ^slicing.discriminator.type = #pattern
+    * coding ^slicing.discriminator.path = "$this"
+    * coding ^slicing.rules = #open
+    * coding ^slicing.ordered = false
+    * coding contains DiagnoseTyp 1..1 MS
+             and DiagnoseSubtyp 0..* MS
+    * coding[DiagnoseTyp] from $VSDiagnoseTyp (required)
+    * coding[DiagnoseSubtyp] from $VSDiagnoseSubtyp (required)
   * rank MS
 * hospitalization MS
   * admitSource 1.. MS
-  * admitSource from $Aufnahmeanlass (preferred)
+  * admitSource from $VSAufnahmeanlass (preferred)
   * dischargeDisposition MS
     * extension ^slicing.discriminator.type = #value
     * extension ^slicing.discriminator.path = "url"
@@ -101,3 +114,5 @@ Severity: #error
 Expression: "status = 'finished' implies period.end.exists()"
 
 // TODO: Examples
+
+
