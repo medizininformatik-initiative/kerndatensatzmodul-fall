@@ -1,0 +1,57 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "supplement",
+  "name": "MII_CS_Fall_SupplementActEncounterCode",
+  "id": "mii-cs-fall-supplement-act-encounter-code",
+  "description": "CodeSystem Supplement für ActEncounterCode",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/SupplementActEncounterCode",
+  "concept": [
+    {
+      "code": "AMB",
+      "display": "ambulatory",
+      "definition": "Umfasst ambulante Operationen nach § 115b SGB V und eine ambulante spezialfachärztliche Versorgung nach § 116b SGB V",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "teilstationäre Behandlung"
+        }
+      ]
+    },
+    {
+      "code": "EMER",
+      "display": "emergency",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Notfall"
+        }
+      ]
+    },
+    {
+      "code": "IMB",
+      "display": "inpatient encounter",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "stationär"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "supplements": "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"
+}
