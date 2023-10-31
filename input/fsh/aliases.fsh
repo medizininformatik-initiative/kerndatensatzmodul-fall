@@ -19,3 +19,4 @@ Alias: $Aufnahmeanlass = http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass
 Alias: $EntlassungsgrundExt = http://fhir.de/StructureDefinition/Entlassungsgrund
 Alias: $EntlassungsgrundErsteUndZweiteStelle = http://fhir.de/CodeSystem/dkgev/EntlassungsgrundErsteUndZweiteStelle
 Alias: $EntlassungsgrundDritteStelle = http://fhir.de/CodeSystem/dkgev/EntlassungsgrundDritteStelle
+Alias: $data-absent-reason-ext = http://hl7.org/fhir/StructureDefinition/data-absent-reason

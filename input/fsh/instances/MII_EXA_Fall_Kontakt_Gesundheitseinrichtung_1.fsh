@@ -5,7 +5,7 @@ Usage: #example
 * identifier.type = $v2-0203#VN
 * identifier.system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/MusterKrankenhaus"
 * identifier.value = "F_0000002"
-* class = $v3-ActCode#IMP "Inpatient"
+* class = $v3-ActCode#IMP "inpatient encounter"
 * subject.reference = "Patient/2b9d3335-70df-4055-b33d-27a55fe00855"
 * serviceProvider.identifier.system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Einrichtungsidentifikator/MusterKrankenhaus"
 * serviceProvider.identifier.value = "260123451_MusterKrankenhaus"

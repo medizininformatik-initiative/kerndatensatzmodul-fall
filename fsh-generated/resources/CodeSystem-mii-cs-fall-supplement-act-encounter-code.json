@@ -29,7 +29,7 @@
       ]
     },
     {
-      "code": "IMB",
+      "code": "IMP",
       "display": "inpatient encounter",
       "designation": [
         {
@@ -52,6 +52,5 @@
       ]
     }
   ],
-  "caseSensitive": true,
-  "supplements": "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"
+  "supplements": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 }
