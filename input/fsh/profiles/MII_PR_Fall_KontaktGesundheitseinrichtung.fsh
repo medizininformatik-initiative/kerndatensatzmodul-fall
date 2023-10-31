@@ -20,7 +20,9 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains Aufnahmenummer 0..1 MS
+* identifier[Aufnahmenummer] ^patternIdentifier.type = $v2-0203#VN
 * identifier[Aufnahmenummer].type 1.. MS
+* identifier[Aufnahmenummer].type from mii-vs-fall-identifier-type-codes (extensible)
 * identifier[Aufnahmenummer].type = $v2-0203#VN
 * identifier[Aufnahmenummer].type.coding ^slicing.discriminator.type = #pattern
 * identifier[Aufnahmenummer].type.coding ^slicing.discriminator.path = "$this"
