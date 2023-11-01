@@ -3,3 +3,4 @@
 # VS Code local history
 .history/
 fsh-generated/resources/ImplementationGuide-mii-ig-fall-de-2024.json
+.DS_Store
