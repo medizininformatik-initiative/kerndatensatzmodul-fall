@@ -76,5 +76,28 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * hospitalization.dischargeDisposition MS
 * hospitalization.dischargeDisposition.extension contains $EntlassungsgrundExt named Entlassungsgrund 0..1 MS
 * location MS
+  * physicalType from mii-vs-fall-location-physical-type (extensible)
+* location ^slicing.discriminator.type = #pattern
+* location ^slicing.discriminator.path = "physicalType"
+* location ^slicing.rules = #open
+* location contains  Zimmer 0..1 MS and Bett 0..1 MS and Station 0..1 MS
+* location[Station]
+  * location 1.. MS
+    * identifier 1.. MS
+    * display 1.. MS
+  * physicalType 1..1 MS
+  * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#wa
+* location[Zimmer]
+  * location 1.. MS
+    * identifier 1.. MS
+    * display 1.. MS
+  * physicalType 1..1 MS
+  * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ro
+* location[Bett]
+  * location 1.. MS
+    * identifier 1.. MS
+    * display 1.. MS
+  * physicalType 1..1 MS
+  * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 * serviceProvider MS
 * partOf MS
