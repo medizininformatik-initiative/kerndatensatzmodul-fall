@@ -1,0 +1,240 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-fall-de-v2024",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ImplementationGuide/mii-ig-fall-de-v2024",
+  "version": "2024.0.0-ballot",
+  "name": "MII_IG_Fall_DE_v2024",
+  "title": "MII IG Fall DE v2024",
+  "status": "active",
+  "description": "[DE] Modul Fall - Version 2024 - IG",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "packageId": "de.medizininformatikinitiative.kerndatensatz.fall",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-fall-capabilitystatement"
+        },
+        "name": "MII CPS Fall CapabilityStatement",
+        "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Fall der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-fall-kontakt-gesundheitseinrichtung"
+        },
+        "name": "MII PR Fall Kontakt mit einer Gesundheitseinrichtung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-fall-identifier-type-codes"
+        },
+        "name": "MII VS Fall Identifier Type Codes",
+        "description": "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-fall-location-physical-type"
+        },
+        "name": "MII VS Fall Location Physical Type",
+        "description": "A coded type for the physical type of the location.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-fall-kontakt-gesundheitseinrichtung-1"
+        },
+        "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-fall-kontakt-gesundheitseinrichtung-2"
+        },
+        "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-diagnosis-use"
+        },
+        "name": "mii-sp-fall-encounter-diagnosis-use",
+        "description": "Suchparameter für Encounter.diagnosis.use",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-admitsource"
+        },
+        "name": "mii-sp-fall-encounter-hospitalization-admitsource",
+        "description": "Suchparameter für Encounter.hospitalization.admitSource",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason"
+        },
+        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason",
+        "description": "Suchparameter für Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason-12"
+        },
+        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason-12",
+        "description": "Suchparameter für erste und zweite Stelle von Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason-3"
+        },
+        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason-3",
+        "description": "Suchparameter für dritte Stelle von Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-location-physical-type"
+        },
+        "name": "mii-sp-fall-encounter-location-physical-type",
+        "description": "Suchparameter für Encounter.location.physicalType",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-fall-encounter-servicetype"
+        },
+        "name": "mii-sp-fall-encounter-servicetype",
+        "description": "Suchparameter für Encounter.serviceType",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-fall-supplement-act-encounter-code"
+        },
+        "name": "MII_CS_Fall_SupplementActEncounterCode",
+        "description": "CodeSystem Supplement für ActEncounterCode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-fall-supplement-patient-class"
+        },
+        "name": "MII_CS_Fall_SupplementPatientClass",
+        "description": "CodeSystem Supplement für v2-0004",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-fall"
+        },
+        "name": "MII_LM_Fall",
+        "description": "Logische Repräsentation des Basismoduls Fall",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "MII-IG-Modul-Fall",
+      "title": "MII IG Modul Fall",
+      "generation": "generated",
+      "page": [
+        {
+          "nameUrl": "MII-IG-Modul-Fall/BeschreibungModul",
+          "title": "Beschreibung Modul",
+          "generation": "generated",
+          "page": [
+            {
+              "nameUrl": "MII-IG-Modul-Fall/BeschreibungModul/EinfachesAufbaumodell.page.md",
+              "title": "Einfaches Aufbaumodell",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "MII-IG-Modul-Fall/BeschreibungModul/KomplexesAusbaumodell.page.md",
+              "title": "Komplexes Ausbaumodell",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "MII-IG-Modul-Fall/KontextimGesamtprojektBezgezuanderenModulen.page.md",
+          "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "MII-IG-Modul-Fall/Referenzen.page.md",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "MII-IG-Modul-Fall/AnwendungsflleInformationsmodell",
+          "title": "Anwendungsfälle / Informationsmodell",
+          "generation": "generated",
+          "page": [
+            {
+              "nameUrl": "MII-IG-Modul-Fall/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md",
+              "title": "Beschreibung von Szenarien für die Anwendung der Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "MII-IG-Modul-Fall/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md",
+              "title": "Datensätze inkl. Beschreibungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "MII-IG-Modul-Fall/AnwendungsflleInformationsmodell/UML.page.md",
+              "title": "UML",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "MII-IG-Modul-Fall/TechnischeImplementierung",
+          "title": "Technische Implementierung",
+          "generation": "generated",
+          "page": [
+            {
+              "nameUrl": "MII-IG-Modul-Fall/TechnischeImplementierung/FHIRProfile",
+              "title": "FHIR Profile",
+              "generation": "generated",
+              "page": [
+                {
+                  "nameUrl": "MII-IG-Modul-Fall/TechnischeImplementierung/FHIRProfile/EncounterKontaktGesundheitseinrichtung.page.md",
+                  "title": "Encounter (Kontakt Gesundheitseinrichtung)",
+                  "generation": "markdown"
+                }
+              ]
+            },
+            {
+              "nameUrl": "MII-IG-Modul-Fall/TechnischeImplementierung/CapabilityStatement.page.md",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "MII-IG-Modul-Fall/TechnischeImplementierung/Terminologien.page.md",
+              "title": "Terminologien",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
