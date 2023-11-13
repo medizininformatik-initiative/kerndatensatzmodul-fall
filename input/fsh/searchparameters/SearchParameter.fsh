@@ -92,7 +92,7 @@ Usage: #definition
 * code = #hospitalization-discharge-reason
 * base = #Encounter
 * type = #composite
-* expression = "Encounter.hospitalization.dischargeDisposition.extension('http://fhir.de/StructureDefinition/Entlassungsgrund')"
+* expression = "Encounter.hospitalization.dischargeDisposition.extension('http://fhir.de/StructureDefinition/Entlassungsgrund').extension.value"
 * component[0].definition = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/encounter-hospitalization-dischargeReason-12"
 * component[=].expression = "first-second"
 * component[+].definition = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/encounter-hospitalization-dischargeReason-3"
