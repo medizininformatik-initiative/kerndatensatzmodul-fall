@@ -24,7 +24,7 @@
     "Encounter"
   ],
   "type": "composite",
-  "expression": "Medication.ingredient.strength",
+  "expression": "Encounter.hospitalization.dischargeDisposition.extension('http://fhir.de/StructureDefinition/Entlassungsgrund')",
   "component": [
     {
       "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/encounter-hospitalization-dischargeReason-12",
