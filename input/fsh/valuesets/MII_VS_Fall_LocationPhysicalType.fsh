@@ -8,7 +8,6 @@ Description: "A coded type for the physical type of the location."
 * ^experimental = false
 * ^date = "2023-10-31"
 * insert Publisher
-* ^status = #draft
 * ^experimental = false
 * LocationType#bd "Bed"
 * LocationType#ro "Room"
