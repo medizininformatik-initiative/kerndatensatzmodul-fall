@@ -6,9 +6,6 @@
 [mii-exa-fall-kontakt-gesundheitseinrichtung-2]: Encounter-mii-exa-fall-kontakt-gesundheitseinrichtung-2.html
 [mii-sp-fall-encounter-diagnosis-use]: SearchParameter-mii-sp-fall-encounter-diagnosis-use.html
 [mii-sp-fall-encounter-hospitalization-admitsource]: SearchParameter-mii-sp-fall-encounter-hospitalization-admitsource.html
-[mii-sp-fall-encounter-hospitalization-discharge-reason]: SearchParameter-mii-sp-fall-encounter-hospitalization-discharge-reason.html
-[mii-sp-fall-encounter-hospitalization-discharge-reason-12]: SearchParameter-mii-sp-fall-encounter-hospitalization-discharge-reason-12.html
-[mii-sp-fall-encounter-hospitalization-discharge-reason-3]: SearchParameter-mii-sp-fall-encounter-hospitalization-discharge-reason-3.html
 [mii-sp-fall-encounter-location-physical-type]: SearchParameter-mii-sp-fall-encounter-location-physical-type.html
 [mii-sp-fall-encounter-servicetype]: SearchParameter-mii-sp-fall-encounter-servicetype.html
 [MII_CS_Fall_SupplementActEncounterCode]: CodeSystem-mii-cs-fall-supplement-act-encounter-code.html

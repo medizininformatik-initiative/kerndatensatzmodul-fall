@@ -88,30 +88,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason"
-        },
-        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason",
-        "description": "Suchparameter für Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason-12"
-        },
-        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason-12",
-        "description": "Suchparameter für erste und zweite Stelle von Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-fall-encounter-hospitalization-discharge-reason-3"
-        },
-        "name": "mii-sp-fall-encounter-hospitalization-discharge-reason-3",
-        "description": "Suchparameter für dritte Stelle von Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-fall-encounter-location-physical-type"
         },
         "name": "mii-sp-fall-encounter-location-physical-type",
