@@ -66,13 +66,13 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * serviceType.coding[ErweiterterFachabteilungsschluessel].system 1.. MS
 * serviceType.coding[ErweiterterFachabteilungsschluessel].code 1.. MS
 * subject 1.. MS
-* subject only $MII-Reference
+//* subject only $MII-Reference
 * period 1.. MS
 * period.start 1.. MS
 * period.end MS
 * diagnosis MS
 * diagnosis.condition 1.. MS
-* diagnosis.condition only $MII-Reference
+//* diagnosis.condition only $MII-Reference
 * diagnosis.use 1.. MS
 * diagnosis.use ^binding.strength = #extensible
 * diagnosis.use.coding 1.. MS
