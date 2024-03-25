@@ -404,6 +404,45 @@
         }
       },
       {
+        "id": "Encounter.diagnosis.use.coding",
+        "path": "Encounter.diagnosis.use.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis.use.coding:Diagnosetyp",
+        "path": "Encounter.diagnosis.use.coding",
+        "sliceName": "Diagnosetyp",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/DiagnoseTyp"
+        }
+      },
+      {
+        "id": "Encounter.diagnosis.use.coding:DiagnosesubTyp",
+        "path": "Encounter.diagnosis.use.coding",
+        "sliceName": "DiagnosesubTyp",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/Diagnosesubtyp"
+        }
+      },
+      {
         "id": "Encounter.diagnosis.rank",
         "path": "Encounter.diagnosis.rank",
         "mustSupport": true

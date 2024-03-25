@@ -54,6 +54,11 @@
       "use": {
         "coding": [
           {
+            "code": "treatment-diagnosis",
+            "system": "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
+            "display": "Behandlungsrelevante Diagnosen"
+          },
+          {
             "code": "DD",
             "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
             "display": "Discharge diagnosis"

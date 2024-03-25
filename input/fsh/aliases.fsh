@@ -22,3 +22,6 @@ Alias: $EntlassungsgrundExt = http://fhir.de/StructureDefinition/Entlassungsgrun
 Alias: $EntlassungsgrundErsteUndZweiteStelle = http://fhir.de/CodeSystem/dkgev/EntlassungsgrundErsteUndZweiteStelle
 Alias: $EntlassungsgrundDritteStelle = http://fhir.de/CodeSystem/dkgev/EntlassungsgrundDritteStelle
 Alias: $data-absent-reason-ext = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $DiagnoseTyp = http://fhir.de/ValueSet/DiagnoseTyp
+Alias: $Diagnosesubtyp = http://fhir.de/ValueSet/Diagnosesubtyp
+Alias: $KontaktDiagnoseProzedur = http://fhir.de/CodeSystem/KontaktDiagnoseProzedur

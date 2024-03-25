@@ -75,6 +75,15 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * diagnosis.condition only $MII-Reference
 * diagnosis.use 1.. MS
 * diagnosis.use ^binding.strength = #extensible
+* diagnosis.use.coding 1.. MS
+* diagnosis.use.coding ^slicing.discriminator.type = #pattern
+* diagnosis.use.coding ^slicing.discriminator.path = "$this"
+* diagnosis.use.coding ^slicing.rules = #open
+* diagnosis.use.coding contains 
+      Diagnosetyp 1..1 MS and 
+      DiagnosesubTyp 0.. MS
+* diagnosis.use.coding[Diagnosetyp] from $DiagnoseTyp (required)
+* diagnosis.use.coding[DiagnosesubTyp] from $Diagnosesubtyp (required)
 * diagnosis.rank MS
 * hospitalization MS
 * hospitalization.admitSource 1.. MS

@@ -59,10 +59,16 @@
         "reference": "Condition/D_0000001"
       },
       "use": {
-        "extension": [
+        "coding": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode": "unknown"
+            "code": "treatment-diagnosis",
+            "system": "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
+            "display": "Behandlungsrelevante Diagnosen"
+          },
+          {
+            "code": "department-main-diagnosis",
+            "system": "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
+            "display": "Abteilung Hauptdiagnose"
           }
         ]
       }
