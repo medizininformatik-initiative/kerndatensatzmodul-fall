@@ -54,11 +54,17 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * serviceType.coding ^slicing.discriminator.type = #pattern
 * serviceType.coding ^slicing.discriminator.path = "$this"
 * serviceType.coding ^slicing.rules = #open
-* serviceType.coding contains Fachabteilungsschluessel 0..1 MS
-* serviceType.coding[Fachabteilungsschluessel] from $FachabteilungsschluesselVS (extensible)
+* serviceType.coding contains 
+    Fachabteilungsschluessel 0..1 MS and 
+    ErweiterterFachabteilungsschluessel 0..1 MS
+* serviceType.coding[Fachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
 * serviceType.coding[Fachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"
 * serviceType.coding[Fachabteilungsschluessel].system 1.. MS
 * serviceType.coding[Fachabteilungsschluessel].code 1.. MS
+* serviceType.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
+* serviceType.coding[ErweiterterFachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+* serviceType.coding[ErweiterterFachabteilungsschluessel].system 1.. MS
+* serviceType.coding[ErweiterterFachabteilungsschluessel].code 1.. MS
 * subject 1.. MS
 * subject only $MII-Reference
 * period 1.. MS
