@@ -4,7 +4,7 @@ Id: mii-pr-fall-kontakt-gesundheitseinrichtung
 Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
 * insert PR_CS_VS_Version
-* obeys mii-enc-1
+* obeys mii-enc-1 and mii-enc-2 and mii-enc-3 and mii-enc-5 and mii-enc-6 and mii-enc-7
 // WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
 // Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
 * id MS
@@ -54,21 +54,36 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * serviceType.coding ^slicing.discriminator.type = #pattern
 * serviceType.coding ^slicing.discriminator.path = "$this"
 * serviceType.coding ^slicing.rules = #open
-* serviceType.coding contains Fachabteilungsschluessel 0..1 MS
-* serviceType.coding[Fachabteilungsschluessel] from $FachabteilungsschluesselVS (extensible)
+* serviceType.coding contains 
+    Fachabteilungsschluessel 0..1 MS and 
+    ErweiterterFachabteilungsschluessel 0..1 MS
+* serviceType.coding[Fachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
 * serviceType.coding[Fachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"
 * serviceType.coding[Fachabteilungsschluessel].system 1.. MS
 * serviceType.coding[Fachabteilungsschluessel].code 1.. MS
+* serviceType.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
+* serviceType.coding[ErweiterterFachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+* serviceType.coding[ErweiterterFachabteilungsschluessel].system 1.. MS
+* serviceType.coding[ErweiterterFachabteilungsschluessel].code 1.. MS
 * subject 1.. MS
-* subject only $MII-Reference
+//* subject only $MII-Reference
 * period 1.. MS
 * period.start 1.. MS
 * period.end MS
 * diagnosis MS
 * diagnosis.condition 1.. MS
-* diagnosis.condition only $MII-Reference
+//* diagnosis.condition only $MII-Reference
 * diagnosis.use 1.. MS
 * diagnosis.use ^binding.strength = #extensible
+* diagnosis.use.coding 1.. MS
+* diagnosis.use.coding ^slicing.discriminator.type = #pattern
+* diagnosis.use.coding ^slicing.discriminator.path = "$this"
+* diagnosis.use.coding ^slicing.rules = #open
+* diagnosis.use.coding contains 
+      Diagnosetyp 0..1 MS and 
+      DiagnosesubTyp 0..1 MS
+* diagnosis.use.coding[Diagnosetyp] from $DiagnoseTyp (required)
+* diagnosis.use.coding[DiagnosesubTyp] from $Diagnosesubtyp (required)
 * diagnosis.rank MS
 * hospitalization MS
 * hospitalization.admitSource 1.. MS

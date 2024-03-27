@@ -7,28 +7,6 @@
   "title": "MII PR Fall Kontakt mit einer Gesundheitseinrichtung",
   "status": "active",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "Encounter",
@@ -43,8 +21,43 @@
           {
             "key": "mii-enc-1",
             "severity": "error",
-            "human": "Falls der Encounter abgeschlossen wurde muss ein Enddatum bekannt sein",
+            "human": "Falls der Encounter abgeschlossen wurde, MUSS ein Enddatum bekannt sein",
             "expression": "status = 'finished' implies period.end.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-2",
+            "severity": "error",
+            "human": "Abgeschlossene, stationäre Kontakte MÜSSEN einen Start- und End-Zeitpunkt angeben",
+            "expression": "status = 'finished' and class = 'IMP' implies period.start.exists() and period.end.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-3",
+            "severity": "error",
+            "human": "Geplante Kontakte DÜRFEN NICHT einen Start- oder End-Zeitpunkt angeben",
+            "expression": "status = 'planned' implies period.exists().not()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-5",
+            "severity": "error",
+            "human": "In-Durchführung befindliche Kontakte MÜSSEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'in-progress' implies period.start.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-6",
+            "severity": "error",
+            "human": "Kontakte mit Abwesenheitsstatus MÜSSEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'onleave' implies period.start.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-7",
+            "severity": "warning",
+            "human": "Kontakte mit unbekannten Status SOLLTEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'unknown' implies period.start.exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
           }
         ]
@@ -304,7 +317,7 @@
         },
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel"
         }
       },
@@ -321,21 +334,36 @@
         "mustSupport": true
       },
       {
+        "id": "Encounter.serviceType.coding:ErweiterterFachabteilungsschluessel",
+        "path": "Encounter.serviceType.coding",
+        "sliceName": "ErweiterterFachabteilungsschluessel",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel"
+        }
+      },
+      {
+        "id": "Encounter.serviceType.coding:ErweiterterFachabteilungsschluessel.system",
+        "path": "Encounter.serviceType.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.serviceType.coding:ErweiterterFachabteilungsschluessel.code",
+        "path": "Encounter.serviceType.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Encounter.subject",
         "path": "Encounter.subject",
         "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -363,18 +391,6 @@
       {
         "id": "Encounter.diagnosis.condition",
         "path": "Encounter.diagnosis.condition",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Condition",
-              "http://hl7.org/fhir/StructureDefinition/Procedure"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -396,6 +412,45 @@
           "strength": "extensible",
           "description": "The type of diagnosis this condition represents.",
           "valueSet": "http://hl7.org/fhir/ValueSet/diagnosis-role"
+        }
+      },
+      {
+        "id": "Encounter.diagnosis.use.coding",
+        "path": "Encounter.diagnosis.use.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis.use.coding:Diagnosetyp",
+        "path": "Encounter.diagnosis.use.coding",
+        "sliceName": "Diagnosetyp",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/DiagnoseTyp"
+        }
+      },
+      {
+        "id": "Encounter.diagnosis.use.coding:DiagnosesubTyp",
+        "path": "Encounter.diagnosis.use.coding",
+        "sliceName": "DiagnosesubTyp",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/Diagnosesubtyp"
         }
       },
       {
