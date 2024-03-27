@@ -80,8 +80,8 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * diagnosis.use.coding ^slicing.discriminator.path = "$this"
 * diagnosis.use.coding ^slicing.rules = #open
 * diagnosis.use.coding contains 
-      Diagnosetyp 1..1 MS and 
-      DiagnosesubTyp 0.. MS
+      Diagnosetyp 0..1 MS and 
+      DiagnosesubTyp 0..1 MS
 * diagnosis.use.coding[Diagnosetyp] from $DiagnoseTyp (required)
 * diagnosis.use.coding[DiagnosesubTyp] from $Diagnosesubtyp (required)
 * diagnosis.rank MS

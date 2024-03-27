@@ -433,7 +433,7 @@
         "id": "Encounter.diagnosis.use.coding:Diagnosetyp",
         "path": "Encounter.diagnosis.use.coding",
         "sliceName": "Diagnosetyp",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
@@ -446,7 +446,7 @@
         "path": "Encounter.diagnosis.use.coding",
         "sliceName": "DiagnosesubTyp",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
