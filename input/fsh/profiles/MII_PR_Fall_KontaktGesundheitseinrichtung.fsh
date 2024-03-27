@@ -4,7 +4,7 @@ Id: mii-pr-fall-kontakt-gesundheitseinrichtung
 Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
 * insert PR_CS_VS_Version
-* obeys mii-enc-1
+* obeys mii-enc-1 and mii-enc-2 and mii-enc-3 and mii-enc-5 and mii-enc-6 and mii-enc-7
 // WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
 // Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
 * id MS

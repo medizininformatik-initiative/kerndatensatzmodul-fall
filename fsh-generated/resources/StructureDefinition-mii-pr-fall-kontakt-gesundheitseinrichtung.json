@@ -21,8 +21,43 @@
           {
             "key": "mii-enc-1",
             "severity": "error",
-            "human": "Falls der Encounter abgeschlossen wurde muss ein Enddatum bekannt sein",
+            "human": "Falls der Encounter abgeschlossen wurde, MUSS ein Enddatum bekannt sein",
             "expression": "status = 'finished' implies period.end.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-2",
+            "severity": "error",
+            "human": "Abgeschlossene, stationäre Kontakte MÜSSEN einen Start- und End-Zeitpunkt angeben",
+            "expression": "status = 'finished' and class = 'IMP' implies period.start.exists() and period.end.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-3",
+            "severity": "error",
+            "human": "Geplante Kontakte DÜRFEN NICHT einen Start- oder End-Zeitpunkt angeben",
+            "expression": "status = 'planned' implies period.exists().not()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-5",
+            "severity": "error",
+            "human": "In-Durchführung befindliche Kontakte MÜSSEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'in-progress' implies period.start.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-6",
+            "severity": "error",
+            "human": "Kontakte mit Abwesenheitsstatus MÜSSEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'onleave' implies period.start.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-7",
+            "severity": "warning",
+            "human": "Kontakte mit unbekannten Status SOLLTEN einen Start-Zeitpunkt angeben",
+            "expression": "status = 'unknown' implies period.start.exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
           }
         ]
