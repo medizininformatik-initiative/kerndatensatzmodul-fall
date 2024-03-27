@@ -25,3 +25,4 @@ Alias: $data-absent-reason-ext = http://hl7.org/fhir/StructureDefinition/data-ab
 Alias: $DiagnoseTyp = http://fhir.de/ValueSet/DiagnoseTyp
 Alias: $Diagnosesubtyp = http://fhir.de/ValueSet/Diagnosesubtyp
 Alias: $KontaktDiagnoseProzedur = http://fhir.de/CodeSystem/KontaktDiagnoseProzedur
+Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type

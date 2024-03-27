@@ -16,3 +16,15 @@ Usage: #example
 * diagnosis.use.coding[DiagnosesubTyp] = $KontaktDiagnoseProzedur#department-main-diagnosis "Abteilung Hauptdiagnose"
 * serviceProvider.identifier.system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Abteilungsidentifikator/MusterKrankenhaus"
 * serviceProvider.identifier.value = "1500_ACHI"
+* location[Zimmer].location.identifier.system = "https://www.charite.de/fhir/sid/Zimmernummern"
+* location[Zimmer].location.identifier.value = "RHC-06-210b"
+* location[Zimmer].location.display = "RHC-06-210b"
+* location[Zimmer].physicalType = $location-physical-type#ro
+* location[Bett].location.identifier.system = "https://www.charite.de/fhir/sid/Bettennummern"
+* location[Bett].location.identifier.value = "RHC-06-210b-02"
+* location[Bett].location.display = "RHC-06-210b-02"
+* location[Bett].physicalType = $location-physical-type#bd
+* location[Station].location.identifier.system = "https://www.charite.de/fhir/sid/Stationsnummern"
+* location[Station].location.identifier.value = "RHC-06"
+* location[Station].location.display = "RHC-06"
+* location[Station].physicalType = $location-physical-type#wa
