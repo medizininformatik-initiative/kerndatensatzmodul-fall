@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.fall",
-  "version": "2024.0.0-ballot",
+  "version": "2024.0.0",
   "description": "Medizininformatik Initiative - Modul Fall",
   "author": "juliansass",
   "fhirVersions": [
