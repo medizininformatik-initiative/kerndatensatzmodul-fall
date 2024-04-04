@@ -7,7 +7,7 @@ topic: EinfachesAufbaumodell
 
 ### Abbildung in Art-Decor
 
-[{{render:artDecorFall}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
+[{{render:implementation-guides/ImplementationGuide-Common/images/artDecor_Fall.png}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
 
 Das Kontakt-Modell des MII KDS orientiert sich, wie oben beschrieben, an den Festlegungen zur FHIR Ressource [*Encounter*](http://hl7.org/fhir/encounter.html) der internationalen Standardisierungsgremien und deren Beachtung in den [Deutsche Basisprofilen (R4)](https://simplifier.net/basisprofil-de-r4). 
 
@@ -128,7 +128,7 @@ Im Folgenden wird das Art-Decor Modell vorgestellt.
 
 ### Art-Decor Modell - Einrichtungskontakt
 
-[{{render:artDecorEinrichtungskontakt}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
+[{{render:implementation-guides/ImplementationGuide-Common/images/artDecor_Einrichtungskontakt.png}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
 
 
 ---
@@ -141,7 +141,7 @@ Für das [**komplexe Ausbaumodell**](https://simplifier.net/guide/Medizininforma
 
 ### Art-Decor Modell - Abteilungskontakt
 
-[{{render:artDecorAbteilungskontakt}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
+[{{render:implementation-guides/ImplementationGuide-Common/images/artDecor_Abteilungskontakt.png}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
 
 ---
 <a id="Versorgungsstellenkontakt"></a>
@@ -155,7 +155,7 @@ Es ist zu beachten, dass in bestimmten Fällen der Unterschied zwischen einem Ab
 
 ### Art-Decor Modell - Versorgungsstellenkontakt
 
-[{{render:artDecorVersorgungsstellenkontakt}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
+[{{render:implementation-guides/ImplementationGuide-Common/images/artDecor_Versorgungsstellenkontakt.png}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
 
 
 -----
