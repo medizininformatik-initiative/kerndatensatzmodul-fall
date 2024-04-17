@@ -52,7 +52,7 @@ Usage: #definition
 // Condition requirements
 * insert SupportResource(Encounter, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Encounter, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2024.0.0, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2024.0.1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
