@@ -11,7 +11,7 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Fall'
 ### Status:
 
 Aktuelle stabile Version: [2024.0.0](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall/2024.0.0) <br>
-Vorherige Version: [1.0.1](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall/1.0.1)
+
 <!-- Reifegrad: -->
 
 Alle veröffentlichten FHIR Artefakte innerhalb des Projektes verfügen über einen Status durch welchen der jeweilige Reifegard abgeleitet werden kann.
