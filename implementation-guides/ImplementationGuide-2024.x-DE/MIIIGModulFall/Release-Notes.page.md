@@ -1,6 +1,16 @@
 ## {{page-title}}
 
+**Version: 2024.0.1**
+
+Datum: 17.04.2024
+
+- Korrektur der Version-Parameter der Conformance-Ressourcen. Im zuvor veröffentlichten Package entsprach `StructureDefinition.version` nicht einheitlich der Package-Version. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/51
+
+---
+
 **Version: 2024.0.0**
+
+Datum: 28.03.2024
 
 - Die veröffentlichten FHIR-Packages verwenden nun [Calender Versioning (CalVer)](https://calver.org/) nach dem Schema YYYY.MINOR.PATCH. Damit wird ein Releasezyklus im Jahresrhythmus etabliert. Die Jahresversion (YYYY) zeigt das Jahr an, in dem das Kerndatensatzmodul angewendet wird. MINOR-Versionen werden bei Einführung neuer Funktionen, Erweiterungen oder substantieller Änderungen veröffentlicht. PATCH-Versionen umfassen Bugfixes oder textuelle Korrekturen.
 - Die Benennung der Conformance-Ressourcen und Beispielinstanzen folgt nun einheitlichen [MII-Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII).
