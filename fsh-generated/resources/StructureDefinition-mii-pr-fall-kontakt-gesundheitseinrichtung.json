@@ -2,10 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-fall-kontakt-gesundheitseinrichtung",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung",
-  "version": "2024.0.1",
+  "version": "2024.1.0",
   "name": "MII_PR_Fall_KontaktGesundheitseinrichtung",
   "title": "MII PR Fall Kontakt mit einer Gesundheitseinrichtung",
   "status": "active",
+  "date": "2024-07-12",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -37,6 +38,13 @@
             "severity": "error",
             "human": "Geplante Kontakte DÜRFEN NICHT einen Start- oder End-Zeitpunkt angeben",
             "expression": "status = 'planned' implies period.exists().not()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+          },
+          {
+            "key": "mii-enc-4",
+            "severity": "warning",
+            "human": "Geplante Kontakte SOLLTEN die Extensions für den geplanten Start- oder End-Zeitpunkt verwenden",
+            "expression": "status = 'planned' implies extension.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate').exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
           },
           {
@@ -115,6 +123,36 @@
         "path": "Encounter.extension.extension",
         "sliceName": "VierteStelle",
         "mustSupport": true
+      },
+      {
+        "id": "Encounter.extension:plannedStartDate",
+        "path": "Encounter.extension",
+        "sliceName": "plannedStartDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.extension:plannedEndDate",
+        "path": "Encounter.extension",
+        "sliceName": "plannedEndDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate"
+            ]
+          }
+        ]
       },
       {
         "id": "Encounter.identifier",
@@ -369,13 +407,11 @@
       {
         "id": "Encounter.period",
         "path": "Encounter.period",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Encounter.period.start",
         "path": "Encounter.period.start",
-        "min": 1,
         "mustSupport": true
       },
       {

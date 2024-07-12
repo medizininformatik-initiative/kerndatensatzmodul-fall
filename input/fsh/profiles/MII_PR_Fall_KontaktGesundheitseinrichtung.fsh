@@ -4,14 +4,15 @@ Id: mii-pr-fall-kontakt-gesundheitseinrichtung
 Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
 * insert PR_CS_VS_Version
-* obeys mii-enc-1 and mii-enc-2 and mii-enc-3 and mii-enc-5 and mii-enc-6 and mii-enc-7
-// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
-// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* obeys mii-enc-1 and mii-enc-2 and mii-enc-3 and mii-enc-4 and mii-enc-5 and mii-enc-6 and mii-enc-7
+* ^date = "2024-07-12"
 * id MS
 * meta MS
 * meta.source MS
 * meta.profile MS
-* extension contains $ExtensionAufnahmegrund named Aufnahmegrund 0..1 MS
+* extension contains $ExtensionAufnahmegrund named Aufnahmegrund 0..1 MS and
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate named plannedStartDate 0..1 and 
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate named plannedEndDate 0..1
 * extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] MS
 * extension[Aufnahmegrund].extension[DritteStelle] MS
 * extension[Aufnahmegrund].extension[VierteStelle] MS
@@ -67,8 +68,8 @@ Title: "MII PR Fall Kontakt mit einer Gesundheitseinrichtung"
 * serviceType.coding[ErweiterterFachabteilungsschluessel].code 1.. MS
 * subject 1.. MS
 //* subject only $MII-Reference
-* period 1.. MS
-* period.start 1.. MS
+* period 0..1 MS
+* period.start MS
 * period.end MS
 * diagnosis MS
 * diagnosis.condition 1.. MS

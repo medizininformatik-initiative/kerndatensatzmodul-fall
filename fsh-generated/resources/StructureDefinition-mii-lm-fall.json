@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-lm-fall",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/LogicalModel/Fall",
-  "version": "2024.0.1",
+  "version": "2024.1.0",
   "name": "MII_LM_Fall",
   "status": "active",
   "description": "Logische Repräsentation des Basismoduls Fall",
@@ -17,6 +17,7 @@
       {
         "id": "Fall",
         "path": "Fall",
+        "short": "MII_LM_Fall",
         "definition": "Logische Repräsentation des Basismoduls Fall"
       },
       {

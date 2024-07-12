@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-fall-de-2024",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ImplementationGuide/mii-ig-fall-de-v2024",
-  "version": "2024.0.1",
+  "version": "2024.1.0",
   "name": "MII_IG_Fall_DE_v2024",
   "title": "MII IG Fall DE v2024",
   "status": "active",
