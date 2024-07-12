@@ -99,6 +99,12 @@ Unter `Encounter.location` können OPTIONAL Details zum Ort, an dem der Kontakt 
 
 --- 
 
+### Geplante Kontake
+
+Geplante Kontake werden mit `Encounter.status = planned` abgebildet und SOLLTEN zusätzlich das geplante Start- bzw. Enddatum mittels Extension in `Encounter.extension` angeben.
+
+---
+
 ### Must-Support FHIR Datenelemente
 
 | FHIR-Element | Kurze Beschreibung |
@@ -171,7 +177,6 @@ Folgende Invarianten müssen bei der Implementierung des Profils beachtet werden
 
 **Constraints**: @``` from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung' for differential.element.constraint select key,severity,human, expression```
 
-Weitere Vorgaben werden durch die Profile für die Datentypen HumanName und Address durch die Deutschen Basisprofile gemacht.
 
 ---
 
