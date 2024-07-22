@@ -127,12 +127,12 @@ Geplante Kontake werden mit `Encounter.status = planned` abgebildet und SOLLTEN 
 | Encounter.period.start | VERPFLICHTEND, Start des Kontakt Zeitraums |
 | Encounter.period.end | OPTIONAL, Ende des Kontakt Zeitraums |
 | Encounter.diagnosis | OPTIONAL Angaben zu Diagnose(n) |
-| Encounter.diagnosis.condition | VERPFLICHTEND, wenn Diagnosedaten angegeben werden, dann muss diese referenziert werden. Es SOLLTE nur die Primärdiagnose referenziert werden. |
-| Encounter.diagnosis.use.coding: | VERPFLICHTEND, preferred Binding auf `http://hl7.org/fhir/ValueSet/diagnosis-role` |
-| Encounter.diagnosis.use.coding:DiagnoseTyp | VERPFLICHTEND, required Binding auf `http://fhir.de/ValueSet/DiagnoseTyp` |
+| Encounter.diagnosis.condition | VERPFLICHTEND, wenn Diagnosedaten angegeben werden, dann MUSS diese referenziert werden. Es SOLLTE nur die Primärdiagnose referenziert werden. |
+| Encounter.diagnosis.use.coding: | VERPFLICHTEND mindestens die Angabe eines Codings. EMPFOHLEN ist die Angabe mittels Diagnosetyp- und DiagnosesubTyp-Coding. Weitere Codings OPTIONAL. Extensible Binding auf `http://hl7.org/fhir/ValueSet/diagnosis-role` |
+| Encounter.diagnosis.use.coding:DiagnoseTyp | OPTIONAL, required Binding auf `http://fhir.de/ValueSet/DiagnoseTyp` |
 | Encounter.diagnosis.use.coding:Diagnosesubtyp | OPTIONAL, required Binding auf `http://fhir.de/ValueSet/Diagnosesubtyp` |
 | Encounter.diagnosis.rank | OPTIONAL |
-| Encounter.hospitalization | VERPFLICHTEND, Daten zur Aufnahme und Entlassung |
+| Encounter.hospitalization | OPTIONAL, Daten zur Aufnahme und Entlassung |
 | Encounter.hospitalization.admitSource | VERPFLICHTEND, Aufnahmeanlass. Preferred Binding auf `http://fhir.de/ValueSet/dgkev/Aufnahmeanlass` |
 | Encounter.hospitalization.dischargeDisposition | OPTIONAL, Entlassungsdaten |
 | Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund | OPTIONAL, Entlassungs-/Verlegungsgrund nach  § 301 Abs. 3 SGB V. `http://fhir.de/StructureDefinition/Entlassungsgrund` |
