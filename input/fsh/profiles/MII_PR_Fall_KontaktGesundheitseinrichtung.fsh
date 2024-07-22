@@ -117,7 +117,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     OPTIONAL, required Binding auf http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert
     Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung inkl. Spezialisierungen.
     """
-* serviceType.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
+* serviceType.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselErweitertVS (required)
 * serviceType.coding[ErweiterterFachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
 * serviceType.coding[ErweiterterFachabteilungsschluessel].system 1.. MS
 * serviceType.coding[ErweiterterFachabteilungsschluessel].code 1.. MS

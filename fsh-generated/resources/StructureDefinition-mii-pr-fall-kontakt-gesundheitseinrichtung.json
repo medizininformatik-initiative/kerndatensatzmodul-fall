@@ -406,7 +406,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel"
+          "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert"
         }
       },
       {
