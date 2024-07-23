@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-ex-fall-planned-end-date",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    }
+  ],
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate",
   "version": "2024.1.0",
   "name": "MII_EX_Fall_Planned_End_Date",
@@ -24,7 +30,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "Encounter"
     }
   ],
   "type": "Extension",
