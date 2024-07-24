@@ -2,11 +2,14 @@
 
 **Version: 2024.1.0**
 
-Datum 12.07.2024
+Datum 24.07.2024
 
+- Minor Release, da neue Funktionen und Erweiterungen hinzugefügt wurden.
 - Änderung der Kardinalität von `Encounter.period` im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} von 1..1 zu 0..1 zur Abbildung von geplanten Kontakten bei denen der tatsächliche Zeitraum des Kontakes noch unbekannt ist. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/56 
-- Das Vorhandensein von Start- und Enddaten abhängig vom Status eines Kontaktes wird nun durch Bedingungen geprüft, die auf der Seite {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} im Abschnitt 'Invarianten' beschrieben sind.
+- Das Vorhandensein von Beginn- und Endzeitpunkt (`Encounter.period`) abhängig vom Status eines Kontaktes wird nun durch Bedingungen geprüft, die auf der Seite {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} im Abschnitt 'Invarianten' beschrieben sind.
 - Erweiterung des Encounter-Profils {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} um zwei Extensions für das geplante Start- bzw. Enddatum in `Encounter.extension`.
+- Korrektur des ValueSet-Bindings auf dem Element `Encounter.serviceType.coding:ErweiterterFachabteilungsschluessel` zu [http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert](https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656779). Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/60 
+- Must-Support FHIR Datenelemente im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} enthalten jetzt erweiterte Beschreibungen unter 'Short description' und 'Definition'.
 
 **Version: 2024.0.1**
 

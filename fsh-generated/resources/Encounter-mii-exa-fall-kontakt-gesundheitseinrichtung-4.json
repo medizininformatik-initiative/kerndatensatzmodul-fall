@@ -6,6 +6,25 @@
       "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2024.1.0"
     ]
   },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.de/CodeSystem/Kontaktebene",
+          "code": "abteilungskontakt"
+        }
+      ]
+    }
+  ],
+  "serviceType": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
+        "code": "2315",
+        "display": "Orthopädie/Schwerpunkt Chirurgie"
+      }
+    ]
+  },
   "status": "in-progress",
   "class": {
     "code": "IMP",
