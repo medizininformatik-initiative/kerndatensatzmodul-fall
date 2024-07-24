@@ -2,9 +2,9 @@
 
 **Version: 2024.1.0**
 
-Datum 23.07.2024
+Datum 24.07.2024
 
-- Minor Release, da neue Funktionen und Erweiterungen hinzugefügt wurden. Instanzen der Vorversion bleiben konform zu diesem Release.
+- Minor Release, da neue Funktionen und Erweiterungen hinzugefügt wurden.
 - Änderung der Kardinalität von `Encounter.period` im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} von 1..1 zu 0..1 zur Abbildung von geplanten Kontakten bei denen der tatsächliche Zeitraum des Kontakes noch unbekannt ist. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/56 
 - Das Vorhandensein von Beginn- und Endzeitpunkt (`Encounter.period`) abhängig vom Status eines Kontaktes wird nun durch Bedingungen geprüft, die auf der Seite {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} im Abschnitt 'Invarianten' beschrieben sind.
 - Erweiterung des Encounter-Profils {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} um zwei Extensions für das geplante Start- bzw. Enddatum in `Encounter.extension`.
