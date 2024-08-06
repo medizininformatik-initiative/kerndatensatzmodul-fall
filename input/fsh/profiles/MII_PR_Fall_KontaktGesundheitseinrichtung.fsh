@@ -160,7 +160,8 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
         VERPFLICHTEND mindestens die Angabe eines Codings. EMPFOHLEN ist die Angabe mittels Diagnosetyp- und DiagnosesubTyp-Coding. 
         Weitere Codings OPTIONAL. Extensible Binding auf `http://hl7.org/fhir/ValueSet/diagnosis-role`
         """
-* diagnosis.use ^binding.strength = #extensible
+//* diagnosis.use ^binding.strength = #extensible
+* diagnosis.use from mii-vs-fall-diagnosis-use (extensible)
 * diagnosis.use.coding 1.. MS
 * diagnosis.use.coding ^slicing.discriminator.type = #pattern
 * diagnosis.use.coding ^slicing.discriminator.path = "$this"
