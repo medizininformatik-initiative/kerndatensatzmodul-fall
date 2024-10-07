@@ -1,5 +1,34 @@
-- include: recommended
-  name: include-recommended
+- action: parse
+  name: parse-fhir-resources 
+  status: "Checking if all FHIR Resource files can be parsed"
+  files:
+  - /**/*.xml
+  - /**/*.json
+  - "!package.json"
+  - "!fsh-index.json"
+  - "!menu.xml"
+
+- name: resource-validation
+  status: "Validating resources against the FHIR standard and their profiles"  
+  action: validate
+  category: Resource
+  suppress: 
+  - 6005
+  - eld-16
+
+- action: unique
+  name: unique-canonicals
+  status: "Checking if all StructureDefinitions have a unique canonical"
+  category: StructureDefinition
+  unique: url 
+
+- include: manifest
+
+- name: no-snapshot
+  status: "Checking that structure definitions do not have a pre-generated snapshot"
+  category: StructureDefinition
+  predicate: snapshot.element.count() = 0
+  error-message: You should not generate a snapshot in your source. Allow consuming tools to generate the snapshot.
 
 - name: version-filled
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
