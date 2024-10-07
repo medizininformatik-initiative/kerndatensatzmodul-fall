@@ -30,6 +30,20 @@
   predicate: snapshot.element.count() = 0
   error-message: You should not generate a snapshot in your source. Allow consuming tools to generate the snapshot.
 
+- name: valid-ids
+  status: Check for valid ids
+  predicate: id.matches('^[A-Za-z0-9\\-\\.]{1,64}$')
+  error-message: The resource must have a valid id
+
+- name: valid-names
+  category: StructureDefinition
+  predicate: name.contains(' ').not()
+  error-message: The name of a StructureDefinition should not contain spaces
+
+- name: unique-names
+  category: Conformance
+  unique: name
+
 - name: version-filled
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   # Excluding NamingSystem as they have no version
