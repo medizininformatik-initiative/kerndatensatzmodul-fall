@@ -3,7 +3,7 @@
   "id": "mii-exa-fall-kontakt-gesundheitseinrichtung-5",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2024.1.0"
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2025.0.0"
     ]
   },
   "status": "onleave",
