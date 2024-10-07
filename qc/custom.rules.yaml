@@ -1,28 +1,5 @@
-- action: parse
-  name: parse-fhir-resources 
-  status: "Checking if all FHIR Resource files can be parsed"
-  files:
-  - /**/*.xml
-  - /**/*.json
-  - "!package.json"
-  - "!fsh-index.json"
-  - "!menu.xml"
-  - "!/**/StructureDefinition-mii-ex-fall-planned-start-date.json"
-  - "!/**/StructureDefinition-mii-ex-fall-planned-end-date.json"
-
-- name: resource-validation
-  status: "Validating resources against the FHIR standard and their profiles"  
-  action: validate
-  category: Resource
-  suppress: 
-  - 6005
-  - eld-16
-
-- action: unique
-  name: unique-canonicals
-  status: "Checking if all StructureDefinitions have a unique canonical"
-  category: StructureDefinition
-  unique: url 
+- include: recommended
+  name: include-recommended
 
 - name: version-filled
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
