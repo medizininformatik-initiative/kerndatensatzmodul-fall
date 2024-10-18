@@ -11,7 +11,7 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "version": "2024.1.0",
+  "version": "2025.0.0",
   "experimental": false,
   "date": "2024-07-26",
   "publisher": "Medizininformatik Initiative",

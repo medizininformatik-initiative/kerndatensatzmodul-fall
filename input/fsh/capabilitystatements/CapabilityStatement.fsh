@@ -40,7 +40,7 @@ Usage: #definition
 * title = "MII CPS Fall CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2023-10-31"
+* date = "2024-10-18"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Fall der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -52,7 +52,7 @@ Usage: #definition
 // Condition requirements
 * insert SupportResource(Encounter, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Encounter, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2024.1.0, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2025.0.0, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -69,10 +69,10 @@ Usage: #definition
 * insert SupportSearchParam(location, http://hl7.org/fhir/SearchParameter/Encounter-location, #reference, #SHALL)
 * insert SupportSearchParam(service-provider, http://hl7.org/fhir/SearchParameter/Encounter-service-provider, #reference, #SHALL)
 * insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/Encounter-part-of, #reference, #SHALL)
-* insert SupportSearchParam(service-type, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-servicetype, #token, #SHALL)
-* insert SupportSearchParam(diagnosis-use, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-diagnosis-use, #token, #SHALL)
+* insert SupportSearchParam(service-type, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-encounter-servicetype, #token, #SHALL)
+* insert SupportSearchParam(diagnosis-use, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-encounter-diagnosis-use, #token, #SHALL)
 * insert SupportSearchParam(hospitalization-admitsource, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-hospitalization-admitSource, #token, #SHALL)
 //* insert SupportSearchParam(hospitalization-discharge-reason-12, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-hospitalization-dischargeReason-12, #token, #SHALL)
 //* insert SupportSearchParam(hospitalization-discharge-reason-3, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-hospitalization-dischargeReason-3, #token, #SHALL)
 //* insert SupportSearchParam(hospitalization-discharge-reason, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-hospitalization-dischargeReason, #composite, #SHALL)
-* insert SupportSearchParam(location-physical-type, https://www.medizininformatik-initiative.de/fhir/core/modul-fall/SearchParameter/Encounter-location-physicalType, #token, #SHALL)
+* insert SupportSearchParam(location-physical-type, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-encounter-location-physical-type, #token, #SHALL)
