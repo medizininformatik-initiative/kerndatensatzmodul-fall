@@ -2,8 +2,8 @@ canonical: https://www.medizininformatik-initiative.de/fhir/core/modul-fall
 fhirVersion: 4.0.1
 FSHOnly: false
 applyExtensionMetadataToRoot: false
-id: mii-ig-fall-de-2025
-name: MII_IG_Fall_DE
+id: mii-ig-fall
+name: MII_IG_Fall
 status: active
 version: "2025.0.0"
 packageId: de.medizininformatikinitiative.kerndatensatz.fall
@@ -14,7 +14,9 @@ publisher:
   url: https://www.medizininformatik-initiative.de/
 dependencies:
   de.basisprofil.r4: 1.5.0
-  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.0-alpha1
+  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.0-alpha4
   hl7.fhir.extensions.r5: 4.0.1
+
 menu:
   Home: index.html
+  Artifacts: artifacts.html
