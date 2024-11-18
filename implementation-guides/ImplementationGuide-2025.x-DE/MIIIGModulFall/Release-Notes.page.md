@@ -2,8 +2,11 @@
 
 **Version: 2025.0.0**
 
-Datum 07.10.2024
+Datum 18.11.2024
 
+- Dependency auf de.basisprofil.r4 aktualisiert auf Version 1.5.0. 
+- Profile enthalten zusätzliche Beschreibungen und Übersetzungen für Implementierer und das Forschungsdatenportal für Gesundheit (FDPG).
+- Suchparameter aus diesem Modul entfernt. SearchParameter-Ressourcen werden nun zentral im Modul Meta verwaltet.
 - Änderung der Kardinalität von `Encounter.period` im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} von 1..1 zu 0..1 zur Abbildung von geplanten Kontakten bei denen der tatsächliche Zeitraum des Kontakes noch unbekannt ist. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/56 
 - Das Vorhandensein von Beginn- und Endzeitpunkt (`Encounter.period`) abhängig vom Status eines Kontaktes wird nun durch Bedingungen geprüft, die auf der Seite {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} im Abschnitt 'Invarianten' beschrieben sind. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/34 
 - Erweiterung des Encounter-Profils {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} um zwei Extensions für das geplante Start- bzw. Enddatum in `Encounter.extension`.
