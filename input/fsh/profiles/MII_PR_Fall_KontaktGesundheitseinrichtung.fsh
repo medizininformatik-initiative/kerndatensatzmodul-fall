@@ -27,6 +27,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * insert Translation(extension[Aufnahmegrund] ^definition, de-DE, Aufnahmegrund nach Schlüssel 1\, Anlage 2\, Datenübermittlung nach § 301 Abs. 3 SGB V)
 * insert Translation(extension[Aufnahmegrund] ^definition, en-US, Admission reason according to key 1\, appendix 2\, data transmission according to § 301 para. 3 SGB V)
 * extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] MS
+* extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^short = "1. und 2. Stelle"
 * insert Translation(extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^short, de-DE, 1. und 2. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^short, en-US, 1st and 2nd position)
 * extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^definition = """
@@ -35,6 +36,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * insert Translation(extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^definition, de-DE, Aufnahmegrund 1. und 2. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[ErsteUndZweiteStelle] ^definition, en-US, Admission reason 1st and 2nd position)
 * extension[Aufnahmegrund].extension[DritteStelle] MS
+* extension[Aufnahmegrund].extension[DritteStelle] ^short = "3. Stelle"
 * insert Translation(extension[Aufnahmegrund].extension[DritteStelle] ^short, de-DE, 3. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[DritteStelle] ^short, en-US, 3rd position)
 * extension[Aufnahmegrund].extension[DritteStelle] ^definition = """
@@ -43,6 +45,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * insert Translation(extension[Aufnahmegrund].extension[DritteStelle] ^definition, de-DE, Aufnahmegrund 3. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[DritteStelle] ^definition, en-US, Admission reason 3rd position)
 * extension[Aufnahmegrund].extension[VierteStelle] MS
+* extension[Aufnahmegrund].extension[VierteStelle] ^short = "4. Stelle"
 * insert Translation(extension[Aufnahmegrund].extension[VierteStelle] ^short, de-DE, 4. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[VierteStelle] ^short, en-US, 4th position)
 * extension[Aufnahmegrund].extension[VierteStelle] ^definition = """
@@ -51,8 +54,12 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * insert Translation(extension[Aufnahmegrund].extension[VierteStelle] ^definition, de-DE, Aufnahmegrund 4. Stelle)
 * insert Translation(extension[Aufnahmegrund].extension[VierteStelle] ^definition, en-US, Admission reason 4th position)
 * identifier MS
+* identifier ^short = "Identifikator"
 * insert Translation(identifier ^short, de-DE, Identifikator)
 * insert Translation(identifier ^short, en-US, Identifier)
+* identifier ^definition = """
+    Kennung/en, unter der/denen dieser Kontakt bekannt ist.
+    """
 * insert Translation(identifier ^definition, de-DE, Kennung/en\, unter der/denen dieser Kontakt bekannt ist.)
 * insert Translation(identifier ^definition, en-US, Identifier/s by which this encounter is known.)
 * identifier ^slicing.discriminator.type = #pattern
@@ -85,6 +92,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * identifier[Aufnahmenummer].system 1.. MS
 * identifier[Aufnahmenummer].value 1.. MS
 * status MS
+* status ^short = "Status"
 * insert Translation(status ^short, de-DE, Status)
 * insert Translation(status ^short, en-US, status)
 * status ^definition = """
@@ -101,12 +109,14 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     VERPFLICHTEND, Kontaktklasse. Required Binding auf http://fhir.de/ValueSet/EncounterClassDE. 
     Klassifizierung des Kontaktes in stationär, ambulant, teilstationär oder andere.
     """
-* insert Translation(class ^definition, de-DE, ambulant\, stationär\, vorstationär\, virtuell\, teilstationär\, häusliche Pflege)
-* insert Translation(class ^definition, en-US, ambulatory\, inpatient encounter\, pre-admission\, virtual\, short stay\, home health)
+* insert Translation(class ^definition, de-DE, ambulant | stationär | vorstationär | virtuell | teilstationär | häusliche Pflege)
+* insert Translation(class ^definition, en-US, ambulatory | inpatient encounter | pre-admission | virtual | short stay | home health)
 * class from $EncounterClassDE (required)
 * type MS
+* type ^short = "Kontakttyp"
 * insert Translation(type ^short, de-DE, Typ des Kontaktes)
 * insert Translation(type ^short, en-US, Type of encounter)
+* type ^definition = "Spezifischer Typ des Kontaktes"
 * insert Translation(type ^definition, de-DE, Spezifischer Typ des Kontaktes)
 * insert Translation(type ^definition, en-US, Specific type of encounter)
 * type ^slicing.discriminator.type = #pattern

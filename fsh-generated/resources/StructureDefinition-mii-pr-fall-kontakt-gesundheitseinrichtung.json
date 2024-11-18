@@ -205,6 +205,37 @@
         "id": "Encounter.extension:Aufnahmegrund.extension:ErsteUndZweiteStelle",
         "path": "Encounter.extension.extension",
         "sliceName": "ErsteUndZweiteStelle",
+        "short": "1. und 2. Stelle",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "1. und 2. Stelle"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "1st and 2nd position"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "OPTIONAL, Aufnahmegrund (1. und 2. Stelle), Datenübermittlung nach § 301 Abs. 3 SGB V.",
         "_definition": {
           "extension": [
@@ -236,7 +267,13 @@
             }
           ]
         },
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.extension:Aufnahmegrund.extension:DritteStelle",
+        "path": "Encounter.extension.extension",
+        "sliceName": "DritteStelle",
+        "short": "3. Stelle",
         "_short": {
           "extension": [
             {
@@ -248,7 +285,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "1. und 2. Stelle"
+                  "valueString": "3. Stelle"
                 }
               ]
             },
@@ -261,17 +298,12 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "1st and 2nd position"
+                  "valueString": "3rd position"
                 }
               ]
             }
           ]
-        }
-      },
-      {
-        "id": "Encounter.extension:Aufnahmegrund.extension:DritteStelle",
-        "path": "Encounter.extension.extension",
-        "sliceName": "DritteStelle",
+        },
         "definition": "OPTIONAL, Aufnahmegrund (3. Stelle), Datenübermittlung nach § 301 Abs. 3 SGB V.",
         "_definition": {
           "extension": [
@@ -303,7 +335,13 @@
             }
           ]
         },
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.extension:Aufnahmegrund.extension:VierteStelle",
+        "path": "Encounter.extension.extension",
+        "sliceName": "VierteStelle",
+        "short": "4. Stelle",
         "_short": {
           "extension": [
             {
@@ -315,7 +353,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "3. Stelle"
+                  "valueString": "4. Stelle"
                 }
               ]
             },
@@ -328,17 +366,12 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "3rd position"
+                  "valueString": "4th position"
                 }
               ]
             }
           ]
-        }
-      },
-      {
-        "id": "Encounter.extension:Aufnahmegrund.extension:VierteStelle",
-        "path": "Encounter.extension.extension",
-        "sliceName": "VierteStelle",
+        },
         "definition": "OPTIONAL, Aufnahmegrund (4. Stelle), Datenübermittlung nach § 301 Abs. 3 SGB V.",
         "_definition": {
           "extension": [
@@ -370,37 +403,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "4. Stelle"
-                }
-              ]
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "4th position"
-                }
-              ]
-            }
-          ]
-        }
+        "mustSupport": true
       },
       {
         "id": "Encounter.extension:plannedStartDate",
@@ -444,7 +447,7 @@
           ],
           "rules": "open"
         },
-        "mustSupport": true,
+        "short": "Identifikator",
         "_short": {
           "extension": [
             {
@@ -475,6 +478,7 @@
             }
           ]
         },
+        "definition": "Kennung/en, unter der/denen dieser Kontakt bekannt ist.",
         "_definition": {
           "extension": [
             {
@@ -504,7 +508,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Encounter.identifier:Aufnahmenummer",
@@ -657,6 +662,37 @@
       {
         "id": "Encounter.status",
         "path": "Encounter.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "status"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "VERPFLICHTEND, required Binding auf http://fhir.de/ValueSet/EncounterStatusDe",
         "_definition": {
           "extension": [
@@ -692,36 +728,6 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://fhir.de/ValueSet/EncounterStatusDe"
-        },
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Status"
-                }
-              ]
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "status"
-                }
-              ]
-            }
-          ]
         }
       },
       {
@@ -770,7 +776,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "ambulant, stationär, vorstationär, virtuell, teilstationär, häusliche Pflege"
+                  "valueString": "ambulant | stationär | vorstationär | virtuell | teilstationär | häusliche Pflege"
                 }
               ]
             },
@@ -783,7 +789,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "ambulatory, inpatient encounter, pre-admission, virtual, short stay, home health"
+                  "valueString": "ambulatory | inpatient encounter | pre-admission | virtual | short stay | home health"
                 }
               ]
             }
@@ -807,7 +813,7 @@
           ],
           "rules": "open"
         },
-        "mustSupport": true,
+        "short": "Kontakttyp",
         "_short": {
           "extension": [
             {
@@ -838,6 +844,7 @@
             }
           ]
         },
+        "definition": "Spezifischer Typ des Kontaktes",
         "_definition": {
           "extension": [
             {
@@ -867,7 +874,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Encounter.type:Kontaktebene",
