@@ -302,7 +302,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * location[Bett]
 * location[Bett] ^short = "Bett"
 * location[Bett] ^definition = "Von Patient oder Patientin während des Kontaktes belegter Bettenstellplatz."
-  * location 1.. MS
+  * location 1.. //MS
     //* identifier 1.. MS
     //* display 1.. MS
   * physicalType 1..1 //MS
