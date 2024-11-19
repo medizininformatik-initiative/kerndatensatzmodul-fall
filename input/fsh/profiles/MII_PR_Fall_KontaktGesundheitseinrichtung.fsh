@@ -267,7 +267,7 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * hospitalization.dischargeDisposition.extension[Entlassungsgrund] ^definition = """
         OPTIONAL, Entlassungs-/Verlegungsgrund nach § 301 Abs. 3 SGB V
         """
-* location MS
+* location //MS
 * location ^short = "Kontaktort"
 * insert Translation(location ^short, de-DE, Kontaktort)
 * insert Translation(location ^short, en-US, Location)
@@ -282,32 +282,32 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * location ^slicing.discriminator.type = #pattern
 * location ^slicing.discriminator.path = "physicalType"
 * location ^slicing.rules = #open
-* location contains  Zimmer 0..1 MS and Bett 0..1 MS and Station 0..1 MS
+* location contains  Zimmer 0..1 and Bett 0..1 and Station 0..1
 * location[Station]
 * location[Station] ^short = "Station"
 * location[Station] ^definition = "Die Station, auf welcher der Patient oder die Patientin während des Kontaktes behandelt wurde."
-  * location 1.. MS
-    * identifier 1.. MS
-    * display 1.. MS
-  * physicalType 1..1 MS
+  * location 1.. 
+    //* identifier 1.. MS
+    //* display 1.. MS
+  * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#wa
 * location[Zimmer]
 * location[Zimmer] ^short = "Zimmer"
 * location[Zimmer] ^definition = "Von Patient oder Patientin während des Kontaktes belegtes Zimmer auf einer Station."
-  * location 1.. MS
-    * identifier 1.. MS
-    * display 1.. MS
-  * physicalType 1..1 MS
+  * location 1.. 
+    //* identifier 1.. MS
+    //* display 1.. MS
+  * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ro
 * location[Bett]
 * location[Bett] ^short = "Bett"
 * location[Bett] ^definition = "Von Patient oder Patientin während des Kontaktes belegter Bettenstellplatz."
   * location 1.. MS
-    * identifier 1.. MS
-    * display 1.. MS
-  * physicalType 1..1 MS
+    //* identifier 1.. MS
+    //* display 1.. MS
+  * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
-* serviceProvider MS
+* serviceProvider //MS
 * serviceProvider ^short = "Leistungserbringer"
 * insert Translation(serviceProvider ^short, de-DE, Leistungserbringer)
 * insert Translation(serviceProvider ^short, en-US, Service Provider)
