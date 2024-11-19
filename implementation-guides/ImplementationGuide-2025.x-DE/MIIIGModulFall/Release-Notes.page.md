@@ -2,9 +2,9 @@
 
 **Version: 2025.0.0**
 
-Datum 18.11.2024
+Datum 19.11.2024
 
-- Dependency auf de.basisprofil.r4 aktualisiert auf Version 1.5.0. 
+- Dependency auf de.basisprofil.r4 aktualisiert auf Version 1.5.0. Die Änderung hat keine Auswirkung auf Implementierungen dieses Moduls.
 - Profile enthalten zusätzliche Beschreibungen und Übersetzungen für Implementierer und das Forschungsdatenportal für Gesundheit (FDPG).
 - Suchparameter aus diesem Modul entfernt. SearchParameter-Ressourcen werden nun zentral im Modul Meta verwaltet.
 - Änderung der Kardinalität von `Encounter.period` im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} von 1..1 zu 0..1 zur Abbildung von geplanten Kontakten bei denen der tatsächliche Zeitraum des Kontakes noch unbekannt ist. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/56 
@@ -12,6 +12,9 @@ Datum 18.11.2024
 - Erweiterung des Encounter-Profils {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} um zwei Extensions für das geplante Start- bzw. Enddatum in `Encounter.extension`.
 - Korrektur des ValueSet-Bindings auf dem Element `Encounter.serviceType.coding:ErweiterterFachabteilungsschluessel` zu [http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert](https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656779). Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/60 und https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/55 
 - Must-Support FHIR Datenelemente im Profil {{pagelink: KontaktGesundheitseinrichtungEncounter, text: Encounter (Kontakt Gesundheitseinrichtung), hint: MII_PR_Fall_KontaktGesundheitseinrichtung}} enthalten jetzt erweiterte Beschreibungen unter 'Short description' und 'Definition'.
+- `Encounter.diagnosis.use` hat neu ValueSet-Binding zu `https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/mii-vs-fall-diagnosis-use`.
+- `Encounter.location` in den Slices für Zimmer, Bett, Station Änderung der Kardinaliät der Elemente `Encounter.location.location.identifier` und `Encounter.location.location.display` von 1..1 zu 0..1. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/67 
+- `Encounter.location` und `Encounter.serviceProvider` entfernen der MustSupport-Labels. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/71 
 
 ---
 
