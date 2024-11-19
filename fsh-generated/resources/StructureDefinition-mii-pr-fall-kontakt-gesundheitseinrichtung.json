@@ -1625,11 +1625,6 @@
         "max": "1"
       },
       {
-        "id": "Encounter.location:Bett.location",
-        "path": "Encounter.location.location",
-        "mustSupport": true
-      },
-      {
         "id": "Encounter.location:Bett.physicalType",
         "path": "Encounter.location.physicalType",
         "min": 1,
