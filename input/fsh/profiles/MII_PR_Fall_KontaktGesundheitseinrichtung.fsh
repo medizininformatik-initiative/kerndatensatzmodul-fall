@@ -168,6 +168,10 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     OPTIONAL, required Binding auf http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel
     Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung
     """
+* insert Translation(serviceType.coding[Fachabteilungsschluessel] ^short, de-DE, Fachabteilungsschlüssel)
+* insert Translation(serviceType.coding[Fachabteilungsschluessel] ^short, en-US, Department key)
+* insert Translation(serviceType.coding[Fachabteilungsschluessel] ^definition, de-DE, Fachabteilungen gemäß Anhang 1 der Bundespflegesatzverordnung)
+* insert Translation(serviceType.coding[Fachabteilungsschluessel] ^definition, en-US, Departments according to appendix 1 of the Bundespflegesatzverordnung)
 * serviceType.coding[Fachabteilungsschluessel] from $FachabteilungsschluesselVS (required)
 * serviceType.coding[Fachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"
 * serviceType.coding[Fachabteilungsschluessel].system 1.. MS
@@ -177,6 +181,10 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     OPTIONAL, required Binding auf http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert
     Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung inkl. Spezialisierungen.
     """
+* insert Translation(serviceType.coding[ErweiterterFachabteilungsschluessel] ^short, de-DE, Erweiterter Fachabteilungsschlüssel)
+* insert Translation(serviceType.coding[ErweiterterFachabteilungsschluessel] ^short, en-US, Extended department key)
+* insert Translation(serviceType.coding[ErweiterterFachabteilungsschluessel] ^definition, de-DE, Fachabteilungen gemäß Anhang 1 der Bundespflegesatzverordnung)
+* insert Translation(serviceType.coding[ErweiterterFachabteilungsschluessel] ^definition, en-US, Departments according to appendix 1 of the Bundespflegesatzverordnung)
 * serviceType.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselErweitertVS (required)
 * serviceType.coding[ErweiterterFachabteilungsschluessel] ^patternCoding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
 * serviceType.coding[ErweiterterFachabteilungsschluessel].system 1.. MS

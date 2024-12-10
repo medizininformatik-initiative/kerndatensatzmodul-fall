@@ -1126,7 +1126,67 @@
         "path": "Encounter.serviceType.coding",
         "sliceName": "Fachabteilungsschluessel",
         "short": "Fachabteilungsschlüssel",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Fachabteilungsschlüssel"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Department key"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "OPTIONAL, required Binding auf http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel\nFachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Fachabteilungen gemäß Anhang 1 der Bundespflegesatzverordnung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Departments according to appendix 1 of the Bundespflegesatzverordnung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -1155,7 +1215,67 @@
         "path": "Encounter.serviceType.coding",
         "sliceName": "ErweiterterFachabteilungsschluessel",
         "short": "Erweiterter Fachabteilungsschlüssel",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Erweiterter Fachabteilungsschlüssel"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Extended department key"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "OPTIONAL, required Binding auf http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert\nFachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung inkl. Spezialisierungen.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Fachabteilungen gemäß Anhang 1 der Bundespflegesatzverordnung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Departments according to appendix 1 of the Bundespflegesatzverordnung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
