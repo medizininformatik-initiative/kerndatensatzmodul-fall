@@ -3,6 +3,18 @@
   "id": "mii-ex-fall-planned-start-date",
   "extension": [
     {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CC0-1.0",
+            "system": "http://hl7.org/fhir/spdx-license",
+            "display": "Creative Commons Zero v1.0 Universal"
+          }
+        ]
+      }
+    },
+    {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
       "valueCode": "pa"
     }

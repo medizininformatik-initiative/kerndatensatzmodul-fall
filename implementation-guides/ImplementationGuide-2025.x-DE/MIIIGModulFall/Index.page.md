@@ -9,7 +9,7 @@ Im Folgenden werden die Use-Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 07.10.2024  |
+| Datum   | 10.12.2024  |
 | Version | 2025.0.0 |
 | Status  | Active       |
 | Realm   | DE          | 
@@ -67,9 +67,14 @@ Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https:
 * Ulrich Sax (HiGHmed)
 
 ## Copyright-Hinweis, Nutzungshinweise
-Copyright © 2020+: TMF e. V., Charlottenstraße 42, 10117 Berlin
-
-Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
+<p>
+    © 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin. <br>
+    Dieses Werk ist lizenziert unter der 
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+</p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+    <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0 Logo" style="border:0;">
+</a>
 
 Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die FHIR-Basis-Spezifikation.
 

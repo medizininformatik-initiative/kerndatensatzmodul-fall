@@ -10,7 +10,7 @@ parent:
 
 ## Einleitung
 
-Im Modul FALL des MII KDS benutzen wir den Begriff *Fall* nur als ungenauen Oberbegriff und folgen darin dem [**Leitfaden Basis DE (R4)**](https://ig.fhir.de/basisprofile-de/1.4.0/Ressourcen-AmbulanterStationaererFall.html), dem Implementation Guide (IG) der Deutschen FHIR Basisprofile des HL7 Deutschland e.V. Dort wird die differenzierte Verwendung der FHIR Begriffe [**EpisodeOfCare**](http://hl7.org/fhir/R4/episodeofcare.html), [**Encounter**](http://hl7.org/fhir/R4/encounter.html) und [**Account**](http://hl7.org/fhir/R4/account.html) vorgeschlagen: 
+Im Modul FALL des MII KDS benutzen wir den Begriff *Fall* nur als ungenauen Oberbegriff und folgen darin dem [**Leitfaden Basis DE (R4)**](https://ig.fhir.de/basisprofile-de/1.5.0/ig-markdown-Ressourcen-AmbulanterStationaererFall.html), dem Implementation Guide (IG) der Deutschen FHIR Basisprofile des HL7 Deutschland e.V. Dort wird die differenzierte Verwendung der FHIR Begriffe [**EpisodeOfCare**](http://hl7.org/fhir/R4/episodeofcare.html), [**Encounter**](http://hl7.org/fhir/R4/encounter.html) und [**Account**](http://hl7.org/fhir/R4/account.html) vorgeschlagen: 
 
 >Der Begriff "Fall" gruppiert im Sprachgebrauch verschiedene Konzepte, die in FHIR durch unterschiedliche Ressourcen repräsentiert werden:
 >

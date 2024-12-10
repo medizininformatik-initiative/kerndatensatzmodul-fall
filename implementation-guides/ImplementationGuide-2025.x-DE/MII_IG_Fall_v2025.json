@@ -1,10 +1,24 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-fall",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ImplementationGuide/mii-ig-fall-de-v2025",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://spdx.org/licenses/",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International License"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ImplementationGuide/mii-ig-fall",
   "version": "2025.0.0",
-  "name": "MII_IG_Fall_DE",
-  "title": "MII IG Fall DE v2025",
+  "name": "MII_IG_Fall",
+  "title": "MII IG Fall v2025",
   "status": "active",
   "description": "Modul Fall - Version 2025 - IG",
   "publisher": "Medizininformatik Initiative",
@@ -32,7 +46,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "1.0.3",
+      "version": "2025.0.0",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     }
