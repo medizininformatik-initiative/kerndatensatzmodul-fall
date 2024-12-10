@@ -2,7 +2,7 @@
 
 **Version: 2025.0.0**
 
-Datum 19.11.2024
+Datum 10.12.2024
 
 - Dependency auf de.basisprofil.r4 aktualisiert auf Version 1.5.0. Die Änderung hat keine Auswirkung auf Implementierungen dieses Moduls.
 - Profile enthalten zusätzliche Beschreibungen und Übersetzungen für Implementierer und das Forschungsdatenportal für Gesundheit (FDPG).
