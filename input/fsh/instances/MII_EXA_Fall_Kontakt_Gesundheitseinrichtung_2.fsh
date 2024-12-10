@@ -1,6 +1,7 @@
 Instance: mii-exa-fall-kontakt-gesundheitseinrichtung-2
 InstanceOf: mii-pr-fall-kontakt-gesundheitseinrichtung
 Usage: #example
+* insert TestDataLabel
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung)
 * identifier.type = $v2-0203#VN
 * identifier.system = "http://medizininformatik-initiative.de/fhir/NamingSystem/Aufnahmenummer/MusterKrankenhaus"
