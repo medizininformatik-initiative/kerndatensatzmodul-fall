@@ -5,6 +5,7 @@ Description: "CodeSystem Supplement für v2-0004"
 * insert PR_CS_VS_Version
 * ^experimental = false
 * insert Publisher
+* insert LicenseCodeableCCBY40
 * ^content = #supplement
 * ^supplements = "http://terminology.hl7.org/CodeSystem/v2-0004"
 * #R "recurring patient"

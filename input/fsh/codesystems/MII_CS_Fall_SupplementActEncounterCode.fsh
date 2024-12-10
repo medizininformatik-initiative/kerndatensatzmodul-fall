@@ -3,6 +3,7 @@ Id: mii-cs-fall-supplement-act-encounter-code
 Description: "CodeSystem Supplement für ActEncounterCode"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/SupplementActEncounterCode"
 * insert PR_CS_VS_Version
+* insert LicenseCodeableCCBY40
 * ^experimental = false
 * insert Publisher
 * ^supplements = "http://terminology.hl7.org/CodeSystem/v3-ActCode"

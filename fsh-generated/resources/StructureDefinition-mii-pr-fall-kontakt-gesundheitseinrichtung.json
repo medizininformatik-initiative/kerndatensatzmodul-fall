@@ -1,6 +1,20 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CC-BY-4.0",
+            "system": "http://hl7.org/fhir/spdx-license",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung",
   "version": "2025.0.0",
   "name": "MII_PR_Fall_KontaktGesundheitseinrichtung",
@@ -36,7 +50,7 @@
     ]
   },
   "status": "active",
-  "date": "2024-10-01",
+  "date": "2024-12-10",
   "description": "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle",
   "fhirVersion": "4.0.1",
   "kind": "resource",

@@ -7,8 +7,9 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
 * insert Translation(^title, de-DE, Fall - Kontakt mit einer Gesundheitseinrichtung)
 * insert Translation(^title, en-US, Treatment case - Encounter with Health Care Facility)
 * insert PR_CS_VS_Version
+* insert LicenseCodeableCCBY40
 * obeys mii-enc-1 and mii-enc-2 and mii-enc-3 and mii-enc-4 and mii-enc-5 and mii-enc-6 and mii-enc-7
-* ^date = "2024-10-01"
+* ^date = "2024-12-10"
 * id MS
 * id ^definition = "Angabe OPTIONAL, vom Server automatisch vergebene system-abhängige ID"
 * meta MS

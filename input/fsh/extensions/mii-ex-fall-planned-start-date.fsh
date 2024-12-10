@@ -4,6 +4,7 @@ Title: "MII EX Fall Planned Start Date"
 Description: "The planned start date/time (or admission date) of the encounter"
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert LicenseCodeableCC0
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pa
 * insert ExtensionContext(Encounter)

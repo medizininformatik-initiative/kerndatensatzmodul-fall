@@ -36,11 +36,12 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CapabilityStatement/metadata"
 * insert Version
 * insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
 * name = "MII_CPS_Fall_CapabilityStatement"
 * title = "MII CPS Fall CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2024-10-18"
+* date = "2024-12-10"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Fall der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements

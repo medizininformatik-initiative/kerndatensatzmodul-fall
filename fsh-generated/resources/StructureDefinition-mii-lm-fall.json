@@ -1,10 +1,25 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-lm-fall",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CC-BY-4.0",
+            "system": "http://hl7.org/fhir/spdx-license",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/LogicalModel/Fall",
   "version": "2025.0.0",
   "name": "MII_LM_Fall",
   "status": "active",
+  "date": "2024-12-10",
   "description": "Logische Repräsentation des Basismoduls Fall",
   "fhirVersion": "4.0.1",
   "kind": "logical",

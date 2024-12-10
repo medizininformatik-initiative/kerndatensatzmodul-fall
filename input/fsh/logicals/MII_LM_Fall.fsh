@@ -4,6 +4,8 @@ Id: mii-lm-fall
 Description: "Logische Repräsentation des Basismoduls Fall"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/LogicalModel/Fall"
 * insert PR_CS_VS_Version
+* insert LicenseCodeableCCBY40
+* ^date = "2024-12-10"
 * Einrichtungskontakt 0..* BackboneElement "Beschreibt den Kontakt zur Einrichtung, bestimmt durch den Behandlungsvertrag."
 * Einrichtungskontakt.KontaktEbene 0..* http://hl7.org/fhir/StructureDefinition/CodeableConcept "Für die Unterscheidung der Kontakt-Hierarchieebenen im Modul FALL werden folgende Ausprägungen unterschieden:\r\n\r\n1. Einrichtungskontakt\r\n\r\n2. Abteilungskontakt\r\n\r\n3. Versorgungsstellenkontakt\r\n\r\nDiese Gliederung gilt zunächst für stationäre Kontakte (siehe Kontakt-Klasse). Die Übertragung auf ambulante und teilstationäre Kontakte muss noch abgestimmt werden."
 * Einrichtungskontakt.KontaktKlasse 0..* http://hl7.org/fhir/StructureDefinition/CodeableConcept "Auf Einrichtungsebene, also auf der Kontakt-Ebene Einrichtungskontakt, kann die Kontakt-Klasse stationär, ambulant oder teilstationär sein."
