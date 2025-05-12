@@ -1650,6 +1650,10 @@
             {
               "type": "pattern",
               "path": "physicalType"
+            },
+            {
+              "type": "pattern",
+              "path": "status"
             }
           ],
           "rules": "open"
@@ -1737,6 +1741,13 @@
         "max": "1"
       },
       {
+        "id": "Encounter.location:Zimmer.status",
+        "path": "Encounter.location.status",
+        "min": 1,
+        "patternCode": "active",
+        "mustSupport": true
+      },
+      {
         "id": "Encounter.location:Zimmer.physicalType",
         "path": "Encounter.location.physicalType",
         "min": 1,
@@ -1759,6 +1770,13 @@
         "max": "1"
       },
       {
+        "id": "Encounter.location:Bett.status",
+        "path": "Encounter.location.status",
+        "min": 1,
+        "patternCode": "active",
+        "mustSupport": true
+      },
+      {
         "id": "Encounter.location:Bett.physicalType",
         "path": "Encounter.location.physicalType",
         "min": 1,
@@ -1779,6 +1797,13 @@
         "definition": "Die Station, auf welcher der Patient oder die Patientin während des Kontaktes behandelt wurde.",
         "min": 0,
         "max": "1"
+      },
+      {
+        "id": "Encounter.location:Station.status",
+        "path": "Encounter.location.status",
+        "min": 1,
+        "patternCode": "active",
+        "mustSupport": true
       },
       {
         "id": "Encounter.location:Station.physicalType",

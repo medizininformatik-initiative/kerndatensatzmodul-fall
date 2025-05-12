@@ -35,6 +35,7 @@
   },
   "location": [
     {
+      "status": "active",
       "physicalType": {
         "coding": [
           {
@@ -49,9 +50,14 @@
           "value": "RHC-06-210b"
         },
         "display": "RHC-06-210b"
+      },
+      "period": {
+        "start": "2020-11-02T03:30:00+00:00",
+        "end": "2020-11-02T03:59:59+00:00"
       }
     },
     {
+      "status": "active",
       "physicalType": {
         "coding": [
           {
@@ -66,9 +72,14 @@
           "value": "RHC-06-210b-02"
         },
         "display": "RHC-06-210b-02"
+      },
+      "period": {
+        "start": "2020-11-02T03:30:00+00:00",
+        "end": "2020-11-02T03:59:59+00:00"
       }
     },
     {
+      "status": "active",
       "physicalType": {
         "coding": [
           {
