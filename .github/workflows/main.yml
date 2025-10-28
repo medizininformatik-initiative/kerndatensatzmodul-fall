@@ -13,6 +13,7 @@ on:
 
 jobs:
   DOTNET_FHIR_VALIDATION:
+    if: github.event_name != 'release'
     uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@master
     with:
       ref: ${{ github.event.pull_request.head.ref }}
@@ -20,6 +21,7 @@ jobs:
     secrets: inherit
 
   JAVA_FHIR_VALIDATION:
+    if: github.event_name != 'release'
     uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@master
     with:
       ref: ${{ github.event.pull_request.head.ref }}
@@ -31,7 +33,7 @@ jobs:
     secrets: inherit
 
   RELEASE:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name != 'release'
     needs: [DOTNET_FHIR_VALIDATION, JAVA_FHIR_VALIDATION]
     runs-on: ubuntu-latest
     steps:
@@ -68,7 +70,6 @@ jobs:
 
   NOTIFY_ZULIP:
     if: github.event_name == 'release' && github.event.action == 'published'
-    needs: [RELEASE]
     runs-on: ubuntu-latest
     steps:
       - name: Post release to Zulip
