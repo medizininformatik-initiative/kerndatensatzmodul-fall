@@ -20,7 +20,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate",
-  "version": "2025.0.1-rc.1",
+  "version": "2025.0.1",
   "name": "MII_EX_Fall_Planned_End_Date",
   "title": "MII EX Fall Planned End Date",
   "status": "active",

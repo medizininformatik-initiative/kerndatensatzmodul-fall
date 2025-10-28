@@ -20,7 +20,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate",
-  "version": "2025.0.1-rc.1",
+  "version": "2025.0.1",
   "name": "MII_EX_Fall_Planned_Start_Date",
   "title": "MII EX Fall Planned Start Date",
   "status": "active",
