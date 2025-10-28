@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung",
-  "version": "2025.0.0",
+  "version": "2025.0.1-rc.1",
   "name": "MII_PR_Fall_KontaktGesundheitseinrichtung",
   "title": "MII PR Fall Kontakt mit einer Gesundheitseinrichtung",
   "_title": {
@@ -136,6 +136,20 @@
         "id": "Encounter.meta.profile",
         "path": "Encounter.meta.profile",
         "mustSupport": true
+      },
+      {
+        "id": "Encounter.extension",
+        "path": "Encounter.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "Encounter.extension:Aufnahmegrund",
