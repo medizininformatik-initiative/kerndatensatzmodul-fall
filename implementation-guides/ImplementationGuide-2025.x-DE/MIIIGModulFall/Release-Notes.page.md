@@ -1,5 +1,11 @@
 ## {{page-title}}
 
+**Version: 2025.0.1**
+
+Datum 28.10.2025
+
+- `Changed`: `Encounter.location` erlaubt jetzt die Angabe ehemaliger Kontaktorte. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-fall/issues/79
+
 **Version: 2025.0.0**
 
 Datum 10.12.2024

@@ -5,10 +5,16 @@ RuleSet: SupportResource (resource, expectation)
 * rest.resource[=].extension[0].url = $exp
 * rest.resource[=].extension[0].valueCode = {expectation}
 
-RuleSet: Profile (profile, expectation)
+/*
+Error @ CapabilityStatement.rest[0].resource[0].profile (line 66, col73): The extension http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation 
+is not allowed to be used at this point (this element is [CapabilityStatement.rest.resource.profile, canonical]
+
+Remove expectation from profile because it is not allowed there.
+*/
+RuleSet: Profile (profile)
 * rest.resource[=].profile[+] = "{profile}"
-* rest.resource[=].profile[=].extension[0].url = $exp
-* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
+//* rest.resource[=].profile[=].extension[0].url = $exp
+//* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
@@ -41,7 +47,7 @@ Usage: #definition
 * title = "MII CPS Fall CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2024-12-10"
+* date = "2025-10-22"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Fall der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -52,8 +58,8 @@ Usage: #definition
 
 // Condition requirements
 * insert SupportResource(Encounter, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Encounter, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2025.0.0, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Encounter)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2025.0.1-rc.1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

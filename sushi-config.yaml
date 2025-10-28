@@ -5,7 +5,7 @@ applyExtensionMetadataToRoot: false
 id: mii-ig-fall
 name: MII_IG_Fall
 status: active
-version: "2025.0.0"
+version: "2025.0.1-rc.1"
 packageId: de.medizininformatikinitiative.kerndatensatz.fall
 copyrightYear: 2019+
 releaseLabel: ci-build

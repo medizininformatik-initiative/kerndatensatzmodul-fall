@@ -288,8 +288,10 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
   * physicalType ^definition = """
         SOLL, extensible Binding auf https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ValueSet/location-physical-type
         """
-* location ^slicing.discriminator.type = #pattern
-* location ^slicing.discriminator.path = "physicalType"
+* location ^slicing.discriminator[+].type = #pattern
+* location ^slicing.discriminator[=].path = "physicalType"
+* location ^slicing.discriminator[+].type = #pattern
+* location ^slicing.discriminator[=].path = "status"
 * location ^slicing.rules = #open
 * location contains  Zimmer 0..1 and Bett 0..1 and Station 0..1
 * location[Station]
@@ -300,6 +302,8 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     //* display 1.. MS
   * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#wa
+  * status MS
+  * status = #active
 * location[Zimmer]
 * location[Zimmer] ^short = "Zimmer"
 * location[Zimmer] ^definition = "Von Patient oder Patientin während des Kontaktes belegtes Zimmer auf einer Station."
@@ -308,6 +312,8 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     //* display 1.. MS
   * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ro
+  * status MS
+  * status = #active
 * location[Bett]
 * location[Bett] ^short = "Bett"
 * location[Bett] ^definition = "Von Patient oder Patientin während des Kontaktes belegter Bettenstellplatz."
@@ -316,6 +322,8 @@ Description: "Kontakt zu einer Einrichtung, Abteilung oder Versorgungsstelle"
     //* display 1.. MS
   * physicalType 1..1 //MS
   * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
+  * status MS
+  * status = #active
 * serviceProvider //MS
 * serviceProvider ^short = "Leistungserbringer"
 * insert Translation(serviceProvider ^short, de-DE, Leistungserbringer)
